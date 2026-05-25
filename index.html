@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="AI Music Master Prompt Studio">
+<meta name="theme-color" content="#0f172a">
+<title>AI Music Master Prompt Studio — Free Suno & Udio Lyrics Structurer | Style Prompt Builder 2026</title>
+<meta name="description" content="Free client-side Suno AI lyrics structurer and Udio style prompt builder. Auto-format lyrics with [Verse], [Chorus], [Guitar Solo] meta tags. Build tag-stacked style prompts under 200 chars. No signup, zero tracking. Includes 2026 prompt formula guide.">
+<meta name="keywords" content="suno meta tags list, udio v4 prompt structure, how to add guitar solo in suno, lyrics formatting for AI music, background vocals tag, suno style prompt builder, suno prompt generator, ai music lyrics structurer, suno v5.5 meta tags, how to structure lyrics for suno, suno character limit, udio style prompt tips, tag stacking suno, backing vocals suno, suno verse chorus bridge tags, suno udio lyrics tool, ai song structure template">
+<link rel="canonical" href="https://aimusicprompt.studio/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Music Master Prompt Studio — Free Suno & Udio Lyrics Structurer | Style Prompt Builder 2026">
+<meta property="og:description" content="100% client-side tool to auto-structure AI music lyrics and build perfect Suno/Udio style prompts. No signup, zero tracking. Free forever.">
+<meta property="og:url" content="https://aimusicprompt.studio/">
+<meta property="og:site_name" content="AI Music Master Prompt Studio">
+<meta property="og:image" content="https://aimusicprompt.studio/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Music Master Prompt Studio — Free Suno & Udio Lyrics Structurer">
+<meta name="twitter:description" content="Free tool: auto-structure lyrics with meta tags, build 200-char style prompts. No signup.">
+<meta name="twitter:image" content="https://aimusicprompt.studio/og-image.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI Music Master Prompt Studio",
+  "url": "https://aimusicprompt.studio/",
+  "description": "Free client-side Suno AI and Udio lyrics structurer and style prompt builder. Auto-format lyrics with meta tags, build tag-stacked style prompts.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": { "@type": "EntryPoint", "urlTemplate": "https://aimusicprompt.studio/?q={search_term_string}" },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AI Music Master Prompt Studio",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "description": "Free client-side Suno AI and Udio lyrics structurer and style prompt builder. Auto-format lyrics with meta tags, build tag-stacked style prompts within 200-char limit. No signup, zero tracking.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": ["Lyrics auto-structuring with smart section detection", "Drag-and-drop lyric card reordering", "Meta tag dropdown switching for [Intro],[Verse],[Chorus],[Bridge],[Guitar Solo],[Outro]", "One-click harmony toggle for backing vocals", "Style prompt tag palette with 50+ curated tags", "Real-time 200-character limit counter with visual warnings", "One-click clipboard copy for structured lyrics and style prompts"],
+  "browserRequirements": "Requires JavaScript and modern browser with Clipboard API support"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "AI Music Master Prompt Studio", "item": "https://aimusicprompt.studio/" },
+    { "@type": "ListItem", "position": 2, "name": "Lyrics Structurer Tool", "item": "https://aimusicprompt.studio/#lyrics-structurer" },
+    { "@type": "ListItem", "position": 3, "name": "Style Prompt Builder", "item": "https://aimusicprompt.studio/#style-builder" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to add guitar solo in Suno AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To add a guitar solo in Suno AI, insert the [Guitar Solo] meta tag into your lyrics structure. Place this tag as a standalone section between verses or after a chorus. For example: [Verse 2], then [Guitar Solo], then [Chorus]. Suno AI will interpret this tag and generate an instrumental guitar break in that position. You can also use [Vocal Break] for a capella sections. Use our free AI Music Master Prompt Studio tool to drag-and-drop these tags into your song structure automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Suno AI meta tags for song structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The complete Suno meta tags list includes: [Intro] for opening sections, [Verse 1] and [Verse 2] for narrative verses, [Pre-Chorus] to build tension, [Chorus] for the main hook, [Bridge] for contrast, [Guitar Solo] for instrumental breaks, [Vocal Break] for a capella sections, and [Outro] for the ending. Each tag tells Suno AI how that section should be treated musically. The recommended format uses 4-6 lines per section for optimal AI processing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to add background vocals and harmonies in Suno?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To add background vocals in Suno, wrap specific lyrics lines in parentheses. For example, write (I'm singing in the rain) instead of I'm singing in the rain. This tells Suno AI to layer that line as a backing vocal or harmony instead of the main vocal. This technique also works for call-and-response patterns and layered harmonies. The background vocals tag works across all genres — from Synthwave to K-Pop to Lo-Fi Chill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Suno style prompt character limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suno AI has a 200-character hard limit for style prompts. This means you cannot write full sentences — you must use comma-separated tag stacking. For example: Synthwave, Nostalgic 80s, Ethereal Female Vocals, Analog Synths, 808 Bass, Reverb, Studio Mastered. The recommended formula for 2026 is [Genre] + [Vibe] + [Vocals] + [Instruments] + [Production]. Use our free style prompt builder with real-time character counter to stay within the 200-character limit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to structure lyrics for Suno AI to get the best results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For the best Suno AI song results, structure your lyrics with meta tags in 4-6 line sections. Start with [Intro] (2-4 lines), followed by [Verse 1] (4-6 lines), [Chorus] (4-6 lines), [Verse 2] (4-6 lines), [Chorus] again, [Bridge] (4 lines), and [Outro] (2-4 lines). Always place your strongest lyrics in the chorus. Use parentheses for backing vocals. This format prevents the AI from generating meandering, unstructured tracks. Our free lyrics structurer automates this entire process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Udio v4 prompt structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Udio v4 uses a similar tag-stacking approach to Suno but with more emphasis on production and atmosphere tags. The optimal Udio prompt structure is: Genre + Mood/Vibe + Vocal Style + Key Instruments + Production Quality. Unlike Suno, Udio handles complex prompt combinations better and can interpret nuanced production terms like Sidechain Compression and Glitch Effects. Both platforms benefit from the same structured lyrics approach using meta tags. Our tool works for both Suno and Udio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my AI music sound clunky or drift off track?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common reasons AI music sounds clunky or drifts include: (1) Overloading the style prompt with conflicting tags — stick to 3-5 complementary tags. (2) Poor lyrics formatting without meta tags — always use [Verse], [Chorus], etc. tags. (3) Exceeding the 200-character Suno prompt limit — use a character counter. (4) Missing background vocal indicators — wrap harmonies in parentheses. (5) Unclear genre direction — lead with your primary genre. (6) No production quality tags — add 'Studio Mastered' or 'Reverb'. Use our free tool to avoid all these issues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is tag stacking in Suno and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tag stacking is the technique of building a Suno style prompt using comma-separated genre and style keywords instead of full sentences. Because Suno has a 200-character limit, you stack tags like building blocks: Synthwave, Dark Atmosphere, Ethereal Female Vocals, Analog Synths, Reverb. Each tag adds a layer of style direction. The key is selecting complementary tags from different categories (Genre, Vibe, Vocals, Instruments, Production) that work together rather than conflict. Our style builder has 50+ curated tags organized by category for easy stacking."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Create a Professional AI Music Song with Suno & Udio",
+  "description": "A step-by-step guide to structuring lyrics and building style prompts for Suno AI and Udio music generation in under 2 minutes.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Paste your raw lyrics",
+      "text": "Paste your raw, unformatted lyrics into the left panel textarea. Separate each line with a line break. The tool supports any number of lines."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Click Smart Structure",
+      "text": "Click the 'Smart Structure' button to auto-detect and assign meta tags: [Intro] for the first 2 lines, then [Verse 1], [Chorus], [Verse 2], [Chorus], and [Outro] for the final lines."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Customize tags and harmonies",
+      "text": "Use the dropdown menu on each lyric card to switch tags to [Pre-Chorus], [Bridge], or [Guitar Solo]. Click the microphone icon to add backing vocal parentheses."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Build your style prompt",
+      "text": "In the right panel, click tags from the Genre, Vibe, Vocals, Instruments, and Production categories. The tool auto-joins them with commas and tracks the 200-character limit."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Copy and paste into Suno or Udio",
+      "text": "Click 'Copy Structured Lyrics' and 'Copy Style Prompt' to export both. Paste the lyrics into Suno/Udio's lyrics box and the prompt into the style box."
+    }
+  ],
+  "totalTime": "PT2M"
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        neon: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' },
+        glow: { 400: '#34d399', 500: '#10b981' }
+      }
+    }
+  }
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+  
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: rgba(30,41,59,.3); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: rgba(99,102,241,.4); border-radius: 3px; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes shakeX { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-4px); } 40% { transform: translateX(4px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); } }
+  @keyframes pulseGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(99,102,241,.4); } 50% { box-shadow: 0 0 0 8px rgba(99,102,241,0); } }
+  @keyframes cardSlideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+
+  .animate-fade-up { animation: fadeUp .35s ease-out forwards; }
+  .animate-shake { animation: shakeX .35s ease-in-out; }
+  .animate-glow { animation: pulseGlow 2s ease-in-out infinite; }
+
+  .lyric-card { animation: cardSlideIn .3s ease-out forwards; opacity: 0; }
+  .lyric-card.dragging { opacity: .5; transform: scale(.98); }
+  .lyric-card.drag-over { border-color: #818cf8 !important; box-shadow: 0 0 16px rgba(99,102,241,.25); }
+
+  .tag-chip.selected { background: #4f46e5 !important; color: #fff !important; box-shadow: 0 0 12px rgba(99,102,241,.3); }
+  .tag-chip:not(.selected):hover { background: rgba(55,65,81,.8); }
+
+  .progress-bar { transition: width .3s ease, background .3s ease; }
+
+  .gradient-text { background: linear-gradient(135deg, #818cf8 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+  .card-glow { position: relative; overflow: hidden; }
+  .card-glow::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(99,102,241,.05), transparent); transition: left .6s; }
+  .card-glow:hover::after { left: 100%; }
+
+  .anchor-highlight:target { animation: anchorFlash 1.5s ease-out; }
+  @keyframes anchorFlash { 0% { box-shadow: 0 0 0 2px rgba(99,102,241,.5); } 100% { box-shadow: 0 0 0 2px transparent; } }
+
+  @media (max-width: 1024px) {
+    .split-layout { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen">
+
+<!-- TRUST BANNER -->
+<div class="bg-slate-900/70 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-3 text-sm">
+    <span class="text-emerald-400 text-base">🔒</span>
+    <span class="text-slate-400 font-medium">100% Client-Side: Your lyrics and prompts are processed locally in your browser. Zero tracking.</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="border-b border-slate-800 bg-slate-950/80">
+  <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+    <div class="inline-flex items-center gap-3 mb-1">
+      <div class="w-12 h-12 rounded-xl bg-indigo-600/20 flex items-center justify-center animate-glow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </div>
+      <div>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-slate-100 tracking-tight">
+          AI Music <span class="gradient-text">Master Prompt Studio</span>
+        </h1>
+        <p class="text-slate-500 text-sm mt-0.5">Smart lyrics structuring & style builder for Suno AI · Udio</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- QUICK START / HOW TO USE -->
+<section id="quick-start" class="max-w-7xl mx-auto px-4 py-8">
+  <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 md:p-8">
+    <h2 class="text-xl font-bold text-slate-100 mb-4 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      How to Use — Create Pro AI Music in 2 Minutes
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+      <div class="flex items-start gap-3 bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-indigo-600/30 flex items-center justify-center text-indigo-400 font-bold text-sm">1</span>
+        <div><strong class="text-slate-200 text-sm">Paste raw lyrics</strong><p class="text-slate-400 text-xs mt-1">Paste your song lyrics into the left panel textarea, one line per row.</p></div>
+      </div>
+      <div class="flex items-start gap-3 bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-indigo-600/30 flex items-center justify-center text-indigo-400 font-bold text-sm">2</span>
+        <div><strong class="text-slate-200 text-sm">Smart Structure</strong><p class="text-slate-400 text-xs mt-1">Click "Smart Structure" to auto-split lyrics into [Verse], [Chorus], [Outro].</p></div>
+      </div>
+      <div class="flex items-start gap-3 bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-indigo-600/30 flex items-center justify-center text-indigo-400 font-bold text-sm">3</span>
+        <div><strong class="text-slate-200 text-sm">Customize tags</strong><p class="text-slate-400 text-xs mt-1">Use tag dropdowns to switch to [Bridge], [Guitar Solo], add harmonies.</p></div>
+      </div>
+      <div class="flex items-start gap-3 bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-indigo-600/30 flex items-center justify-center text-indigo-400 font-bold text-sm">4</span>
+        <div><strong class="text-slate-200 text-sm">Build style prompt</strong><p class="text-slate-400 text-xs mt-1">Click genre/vibe/vocal tags in the right panel to stack your style prompt.</p></div>
+      </div>
+      <div class="flex items-start gap-3 bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-indigo-600/30 flex items-center justify-center text-indigo-400 font-bold text-sm">5</span>
+        <div><strong class="text-slate-200 text-sm">Copy & paste</strong><p class="text-slate-400 text-xs mt-1">Hit both Copy buttons, paste into Suno or Udio, and generate your song!</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="max-w-7xl mx-auto px-4 py-8">
+  <div class="split-layout grid grid-cols-2 gap-6">
+
+    <!-- ============ LEFT PANEL: LYRICS STRUCTURER ============ -->
+    <article id="lyrics-structurer" class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 card-glow anchor-highlight" aria-label="Lyrics Structurer Panel">
+      <div class="mb-5">
+        <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2Z"/><path d="M3 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+          Lyrics Structurer
+        </h2>
+        <p class="text-slate-500 text-xs mt-1">Paste raw lyrics, auto-split into tagged sections</p>
+      </div>
+
+      <!-- TEXTAREA MODE -->
+      <div id="lyricsInputArea">
+        <textarea id="lyricsTextarea" rows="12" placeholder="Paste your raw lyrics here...
+
+For example:
+I walk alone in the neon light
+Shadows dance across the night
+The city breathes a silent song
+As I wander all night long
+
+Memories fade like distant stars
+But your voice still echoes far
+In the silence I can hear
+The beat of a heart that's near"
+          class="w-full bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-slate-200 placeholder-slate-600 resize-none text-sm focus:outline-none focus:border-indigo-500/60 transition-colors font-mono leading-relaxed"></textarea>
+        <button id="smartStructureBtn" onclick="smartStructure()"
+          class="mt-3 w-full py-3 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 disabled:from-slate-700 disabled:to-slate-600 disabled:text-slate-500 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275Z"/></svg>
+          Smart Structure
+        </button>
+      </div>
+
+      <!-- CARDS MODE -->
+      <div id="lyricsCardsArea" class="hidden">
+        <div id="lyricsCardsContainer" class="space-y-2 max-h-[440px] overflow-y-auto pr-1"></div>
+        <div class="mt-3 flex gap-2">
+          <button id="copyLyricsBtn" onclick="copyStructuredLyrics()"
+            class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 text-slate-200 font-medium rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            Copy Structured Lyrics
+          </button>
+          <button onclick="resetLyrics()"
+            class="py-2.5 px-4 bg-slate-800 hover:bg-slate-700 text-slate-400 font-medium rounded-xl transition-all duration-200 text-sm border border-slate-700">
+            Reset
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ RIGHT PANEL: STYLE BUILDER ============ -->
+    <article id="style-builder" class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 card-glow anchor-highlight" aria-label="Style Prompt Builder Panel">
+      <div class="mb-5">
+        <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          Style-of-Music Builder
+        </h2>
+        <p class="text-slate-500 text-xs mt-1">Click tags to stack your Suno/Udio prompt (&lt; 200 chars)</p>
+      </div>
+
+      <!-- PROMPT OUTPUT -->
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-4 mb-4">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Style Prompt Output</span>
+          <span id="charCounter" class="text-xs font-mono text-slate-500">0 / 200</span>
+        </div>
+        <div id="promptOutputBox" class="p-3 rounded-lg min-h-[56px] text-sm text-slate-300 border border-transparent bg-slate-900/50 break-words">
+          <span class="text-slate-600 italic">Click tags below to build your prompt...</span>
+        </div>
+        <div class="mt-3 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+          <div id="progressBar" class="progress-bar h-full bg-indigo-500 rounded-full" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- CATEGORY TABS -->
+      <div id="styleCategories" class="flex gap-1.5 mb-4 overflow-x-auto pb-1">
+        <button class="cat-tab px-3.5 py-1.5 bg-indigo-600 text-white rounded-lg text-xs font-semibold whitespace-nowrap transition-all" data-cat="genre" onclick="switchCategory('genre', this)">🎸 Genre</button>
+        <button class="cat-tab px-3.5 py-1.5 bg-slate-800 text-slate-400 rounded-lg text-xs font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="vibe" onclick="switchCategory('vibe', this)">✨ Vibe</button>
+        <button class="cat-tab px-3.5 py-1.5 bg-slate-800 text-slate-400 rounded-lg text-xs font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="vocals" onclick="switchCategory('vocals', this)">🎤 Vocals</button>
+        <button class="cat-tab px-3.5 py-1.5 bg-slate-800 text-slate-400 rounded-lg text-xs font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="instruments" onclick="switchCategory('instruments', this)">🎹 Instruments</button>
+        <button class="cat-tab px-3.5 py-1.5 bg-slate-800 text-slate-400 rounded-lg text-xs font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="production" onclick="switchCategory('production', this)">🎛 Production</button>
+      </div>
+
+      <!-- TAG GRID -->
+      <div id="tagGrid" class="grid grid-cols-2 gap-2.5 max-h-[280px] overflow-y-auto pr-1"></div>
+
+      <!-- COPY STYLE -->
+      <button id="copyStyleBtn" onclick="copyStylePrompt()"
+        class="mt-4 w-full py-2.5 bg-slate-700 hover:bg-slate-600 disabled:bg-slate-800 disabled:text-slate-600 disabled:cursor-not-allowed text-slate-200 font-medium rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+        Copy Style Prompt
+      </button>
+    </article>
+  </div>
+
+  <!-- ============ SEO ARTICLES ============ -->
+  <section class="mt-12 bg-slate-900/40 border border-slate-800 rounded-2xl p-6 md:p-8">
+    <div class="flex items-center gap-2 mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      <h2 class="text-xl font-bold text-slate-100">AI Music Mastery Guides</h2>
+    </div>
+
+    <div class="space-y-3">
+      <!-- Article 1 -->
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <h3 class="text-base font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">How to Use Meta Tags in Suno AI V5.5 for Perfect Song Structure</h3>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-300 leading-relaxed text-sm space-y-3">
+          <p>When working with <strong>Suno AI V5.5</strong>, proper use of <strong>meta tags</strong> is crucial for achieving professional song structures. These tags help the AI understand where different sections of your song should begin and end. Without meta tags, Suno often generates unstructured, meandering tracks that lack the punch of a well-organized song.</p>
+          <div>
+            <h4 class="font-semibold text-indigo-400 mb-2">Key Meta Tags for Suno:</h4>
+            <ul class="list-disc pl-5 space-y-1.5">
+              <li><strong>[Intro]</strong> — Sets the mood and introduces the song. Keep it 2-4 lines with atmospheric or scene-setting lyrics.</li>
+              <li><strong>[Verse 1]</strong> — The first verse, typically 4-6 lines establishing the narrative and introducing the main theme.</li>
+              <li><strong>[Pre-Chorus]</strong> — Builds tension leading into the chorus. 2-4 lines that increase emotional intensity.</li>
+              <li><strong>[Chorus]</strong> — The main hook of the song, usually the most memorable and emotionally charged part.</li>
+              <li><strong>[Verse 2]</strong> — Continues the story with new lyrics, often adding depth or a different perspective.</li>
+              <li><strong>[Bridge]</strong> — A contrasting section that provides relief from repetition and introduces new musical ideas.</li>
+              <li><strong>[Guitar Solo]</strong> — Instrumental break, great for adding dynamics and showcasing musicality.</li>
+              <li><strong>[Outro]</strong> — The conclusion, often fading out or providing lyrical resolution.</li>
+            </ul>
+          </div>
+          <p><strong class="text-emerald-400">Pro Tip:</strong> Always place your strongest lyrical content in the chorus. Suno AI gives extra emphasis to content within <code class="bg-slate-700 px-1.5 py-0.5 rounded text-xs font-mono">[Chorus]</code> tags, making this section the focal point of your generated song.</p>
+          <p><strong>Common Mistakes to Avoid:</strong> Overusing tags — stick to the essential structure. Making sections too long — keep chunks to 4-6 lines maximum. Forgetting the <code class="bg-slate-700 px-1.5 py-0.5 rounded text-xs font-mono">[Outro]</code> — proper endings make songs feel complete and professional.</p>
+        </div>
+      </details>
+
+      <!-- Article 2 -->
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <h3 class="text-base font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">The Ultimate Suno & Udio Style Prompt Formula (2026 Guide)</h3>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-300 leading-relaxed text-sm space-y-3">
+          <p>Crafting the perfect <strong>style prompt</strong> is both an art and a science. With Suno and Udio's <strong>200-character limit</strong>, every word counts. Unlike free-text descriptions, these platforms expect a <strong>comma-separated tag stack</strong> — a dense, efficient list of genre and style keywords. Here is our proven formula for 2026:</p>
+          <p class="bg-slate-900/60 rounded-lg p-3 font-mono text-indigo-300 text-center text-sm">[Genre] + [Vibe] + [Vocals] + [Instruments] + [Production]</p>
+          <div>
+            <h4 class="font-semibold text-indigo-400 mb-2">Example Prompts:</h4>
+            <div class="space-y-2">
+              <div class="bg-slate-900/60 rounded-lg p-3 text-xs font-mono">
+                <span class="text-emerald-400">Synthwave Masterpiece:</span><br>
+                <span class="text-slate-400">Synthwave, Nostalgic 80s, Ethereal Female Vocals, Analog Synths, 808 Bass, Reverb, Studio Mastered</span>
+              </div>
+              <div class="bg-slate-900/60 rounded-lg p-3 text-xs font-mono">
+                <span class="text-emerald-400">Cinematic Epic:</span><br>
+                <span class="text-slate-400">Cinematic Orchestral, Dark Atmosphere, Choir, String Quartet, Orchestral Percussion, Stereo Wide, Reverb</span>
+              </div>
+              <div class="bg-slate-900/60 rounded-lg p-3 text-xs font-mono">
+                <span class="text-emerald-400">Lo-Fi Chill:</span><br>
+                <span class="text-slate-400">Lo-Fi Chill, Chill, Whispered Vocals, Acoustic Piano, Brushed Drums, Low-Fidelity, Lo-Fi Crackle</span>
+              </div>
+            </div>
+          </div>
+          <p><strong class="text-emerald-400">2026 Best Practices:</strong> Mix 3-5 tags from different categories for best results. Prioritize specific, descriptive terms over generic ones. Use comma separation only (no periods or semicolons). Focus on <em>what you want</em>, never what you don't want. New for 2026: enhanced AI understanding of production terms like Sidechain Compression, Stereo Wide, and Glitch Effects.</p>
+        </div>
+      </details>
+
+      <!-- Article 3 -->
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <h3 class="text-base font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">Common Mistakes: Why Your AI Music Sounds Clunky or Drifts</h3>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-300 leading-relaxed text-sm space-y-3">
+          <p>Even experienced users encounter frustrating issues with AI-generated music. Understanding these <strong>common pitfalls</strong> can save you hours of trial and error. Here are the most frequent mistakes and their solutions:</p>
+          <div class="space-y-3">
+            <div>
+              <h4 class="font-semibold text-indigo-400">1. Overloading the Prompt</h4>
+              <p><em class="text-red-400">Problem:</em> Too many conflicting styles confuse the AI model. <em class="text-emerald-400">Solution:</em> Stick to 3-5 complementary tags. If you want both "Aggressive" and "Chill", you will get inconsistent results.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-indigo-400">2. Poor Lyrics Formatting</h4>
+              <p><em class="text-red-400">Problem:</em> Long unbroken text blocks cause AI to lose structural coherence. <em class="text-emerald-400">Solution:</em> Always use meta tags and keep sections to 4-6 lines maximum. The AI needs clear boundaries to maintain song structure throughout generation.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-indigo-400">3. Ignoring Character Limits</h4>
+              <p><em class="text-red-400">Problem:</em> Suno silently truncates prompts over 200 characters, losing your carefully chosen tags. <em class="text-emerald-400">Solution:</em> Use our real-time character counter to stay within limits. Prioritize your most impactful tags at the beginning of the prompt.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-indigo-400">4. Missing Background Vocals</h4>
+              <p><em class="text-red-400">Problem:</em> Songs sound flat and one-dimensional without harmonies. <em class="text-emerald-400">Solution:</em> Use parentheses syntax to add backing vocals: <code class="bg-slate-700 px-1.5 py-0.5 rounded text-xs font-mono">(I'm singing in the rain)</code>. This tells Suno to layer those lines as background harmonies.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-indigo-400">5. Unclear Genre Direction</h4>
+              <p><em class="text-red-400">Problem:</em> AI drifts between genres when direction is vague. <em class="text-emerald-400">Solution:</em> Lead with your primary genre and reinforce it with matching instruments and vibes throughout the prompt.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-indigo-400">6. Forgetting Production Quality</h4>
+              <p><em class="text-red-400">Problem:</em> Output sounds muddy, compressed, or amateur. <em class="text-emerald-400">Solution:</em> Add production tags like "Studio Mastered", "Stereo Wide", or "Reverb" to polish the final sound. These tags significantly impact audio quality.</p>
+            </div>
+          </div>
+          <p><strong class="text-emerald-400">Ultimate Pro Tip:</strong> If your song drifts off track mid-generation, reduce prompt complexity immediately. Focus on 1-2 core styles and use our lyrics structurer to ensure clean, tagged formatting. Less is often more with AI music generation.</p>
+        </div>
+      </details>
+
+      <!-- Article 4 -->
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <h3 class="text-base font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">Suno AI vs Udio: Which Platform Handles Prompts Better in 2026?</h3>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-300 leading-relaxed text-sm space-y-3">
+          <p>Both <strong>Suno AI</strong> and <strong>Udio</strong> have established themselves as the top AI music generation platforms in 2026, but they handle prompts quite differently. Understanding these differences is key to maximizing output quality on each platform.</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs border-collapse">
+              <thead><tr class="border-b border-slate-700"><th class="text-left py-2 pr-4 text-indigo-400">Feature</th><th class="text-left py-2 pr-4 text-slate-300">Suno AI (V5.5)</th><th class="text-left py-2 text-slate-300">Udio (V4)</th></tr></thead>
+              <tbody>
+                <tr class="border-b border-slate-800"><td class="py-2 pr-4 text-slate-400">Style Prompt Limit</td><td class="py-2 pr-4">200 characters</td><td class="py-2">200 characters</td></tr>
+                <tr class="border-b border-slate-800"><td class="py-2 pr-4 text-slate-400">Lyrics Meta Tags</td><td class="py-2 pr-4">Full support for [Verse], [Chorus], etc.</td><td class="py-2">Full support, identical syntax</td></tr>
+                <tr class="border-b border-slate-800"><td class="py-2 pr-4 text-slate-400">Production Tags</td><td class="py-2 pr-4">Basic (Reverb, Studio Mastered)</td><td class="py-2 text-emerald-400">Advanced (Sidechain Compression, Glitch)</td></tr>
+                <tr class="border-b border-slate-800"><td class="py-2 pr-4 text-slate-400">Genre Range</td><td class="py-2 pr-4">Extensive (50+ genres)</td><td class="py-2">Extensive, excels at electronic</td></tr>
+                <tr class="border-b border-slate-800"><td class="py-2 pr-4 text-slate-400">Audio Quality</td><td class="py-2 pr-4">Up to 192kbps stereo</td><td class="py-2 text-emerald-400">Up to 320kbps stereo</td></tr>
+                <tr class="border-b border-slate-800"><td class="py-2 pr-4 text-slate-400">Guitar Solo</td><td class="py-2 pr-4">Via [Guitar Solo] meta tag</td><td class="py-2">Via [Guitar Solo] meta tag</td></tr>
+                <tr><td class="py-2 pr-4 text-slate-400">Backing Vocals</td><td class="py-2 pr-4">Parentheses ( ) syntax</td><td class="py-2">Parentheses ( ) syntax</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong class="text-emerald-400">Verdict for 2026:</strong> Suno AI offers a better user experience and more consistent results for beginners, making it the recommended starting point. Udio excels in production quality and handles complex, nuanced prompts with greater sophistication — ideal for experienced producers. Both platforms benefit from our lyrics structurer and style prompt builder, which are compatible with the same meta tags and tag-stacking formats.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Keywords footer -->
+    <div class="mt-6 pt-5 border-t border-slate-800">
+      <p class="text-xs text-slate-600">
+        Tags: suno meta tags list · udio v4 prompt structure · how to add guitar solo in suno · lyrics formatting for AI music · background vocals tag · AI music prompt studio · suno style prompt builder 2026
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ SECTION (Rich Snippets) ============ -->
+  <section id="faq" class="mt-12 bg-slate-900/40 border border-slate-800 rounded-2xl p-6 md:p-8">
+    <div class="flex items-center gap-2 mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+      <h2 class="text-xl font-bold text-slate-100">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-3">
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <span class="text-sm font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">How to add guitar solo in Suno AI?</span>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-4 text-slate-300 text-sm leading-relaxed">
+          Insert the <strong>[Guitar Solo]</strong> meta tag as a standalone section in your lyrics — typically between <strong>[Verse 2]</strong> and <strong>[Chorus]</strong>. This tells Suno AI to generate an instrumental guitar break at that exact spot in your song.
+        </div>
+      </details>
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <span class="text-sm font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">What are the Suno AI meta tags for song structure?</span>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-4 text-slate-300 text-sm leading-relaxed">
+          The <strong>complete Suno meta tags list</strong> includes <strong>[Intro]</strong>, <strong>[Verse 1]</strong>, <strong>[Verse 2]</strong>, <strong>[Pre-Chorus]</strong>, <strong>[Chorus]</strong>, <strong>[Bridge]</strong>, <strong>[Guitar Solo]</strong>, <strong>[Vocal Break]</strong>, and <strong>[Outro]</strong>.
+        </div>
+      </details>
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <span class="text-sm font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">How to add background vocals / harmonies in Suno?</span>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-4 text-slate-300 text-sm leading-relaxed">
+          Wrap any lyric line in parentheses to mark it as a <strong>background vocal</strong> or <strong>harmony</strong>. Example: <code class="bg-slate-700 px-1.5 py-0.5 rounded text-xs font-mono">(I'm singing in the rain)</code>. Suno layers that line behind the main vocal.
+        </div>
+      </details>
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <span class="text-sm font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">What is the Suno style prompt character limit?</span>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-4 text-slate-300 text-sm leading-relaxed">
+          Suno AI enforces a <strong>strict 200-character limit</strong> on style prompts. Use comma-separated tags instead of sentences. Formula: <strong>Genre + Vibe + Vocals + Instruments + Production</strong>.
+        </div>
+      </details>
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <span class="text-sm font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">How to structure lyrics for Suno AI to get the best results?</span>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-4 text-slate-300 text-sm leading-relaxed">
+          Structure with 4-6 lines per section: <strong>[Intro]</strong> → <strong>[Verse 1]</strong> → <strong>[Chorus]</strong> → <strong>[Verse 2]</strong> → <strong>[Bridge]</strong> → <strong>[Outro]</strong>. Put strongest lyrics in <strong>[Chorus]</strong>. Use parentheses for harmonies.
+        </div>
+      </details>
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <span class="text-sm font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">What is the Udio v4 prompt structure?</span>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-4 text-slate-300 text-sm leading-relaxed">
+          Udio v4 uses the same <strong>tag-stacking</strong> approach but excels with <strong>production-heavy prompts</strong> like Sidechain Compression and Glitch Effects. Structure: <strong>Genre + Vibe + Vocals + Instruments + Production</strong>.
+        </div>
+      </details>
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <span class="text-sm font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">Why does my AI music sound clunky or drift off track?</span>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-4 text-slate-300 text-sm leading-relaxed">
+          Common causes: <strong>overloading prompts</strong> (stick to 3-5 tags), <strong>no meta tags</strong> (use [Verse]/[Chorus]), <strong>exceeding 200 chars</strong>, <strong>missing backing vocals</strong>, and <strong>vague genre direction</strong>. Add <strong>Studio Mastered</strong> for polish.
+        </div>
+      </details>
+      <details class="group bg-slate-800/40 border border-slate-700 rounded-xl overflow-hidden">
+        <summary class="px-5 py-4 cursor-pointer flex items-center justify-between hover:bg-slate-800/60 transition-colors list-none">
+          <span class="text-sm font-semibold text-slate-200 group-open:text-indigo-400 transition-colors">What is tag stacking in Suno and how does it work?</span>
+          <svg class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="px-5 pb-4 text-slate-300 text-sm leading-relaxed">
+          <strong>Tag stacking</strong> builds prompts from comma-separated keywords like <strong>Synthwave, Ethereal Female Vocals, Analog Synths, High Energy</strong>. Select complementary tags across categories that reinforce each other.
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="mt-12 border-t border-slate-800 bg-slate-950/80" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+      <div>
+        <h3 class="text-sm font-semibold text-slate-300 mb-2">AI Music Master Prompt Studio</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">100% client-side, free forever. No signup, zero tracking. The fastest way to structure lyrics and build style prompts for Suno AI and Udio.</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-slate-300 mb-2">Quick Links</h3>
+        <ul class="text-xs text-slate-500 space-y-1">
+          <li><a href="#lyrics-structurer" class="hover:text-indigo-400 transition-colors">Lyrics Structurer Tool</a></li>
+          <li><a href="#style-builder" class="hover:text-indigo-400 transition-colors">Style Prompt Builder</a></li>
+          <li><a href="#faq" class="hover:text-indigo-400 transition-colors">FAQ — Suno Tags & Tips</a></li>
+          <li><a href="#quick-start" class="hover:text-indigo-400 transition-colors">Quick Start Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-slate-300 mb-2">Popular Search Topics</h3>
+        <ul class="text-xs text-slate-500 space-y-1">
+          <li>Suno meta tags list · Udio v4 prompt structure</li>
+          <li>How to add guitar solo in suno</li>
+          <li>Lyrics formatting for AI music</li>
+          <li>Suno style prompt builder · Tag stacking</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs pt-5 border-t border-slate-800">
+      <span class="text-slate-500">AI Music Master Prompt Studio — 100% Client-Side, Zero Tracking · Free for Everyone</span>
+      <div class="flex items-center gap-3 text-slate-600">
+        <span>Compatible with Suno AI V5.5 & Udio V4</span>
+        <span>·</span>
+        <span>2026</span>
+        <span>·</span>
+        <a href="#!" class="hover:text-indigo-400 transition-colors">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+// ============================
+// DATA: Style Tags Dictionary
+// ============================
+const TAG_CATEGORIES = {
+  genre: {
+    label: 'Genre',
+    tags: ['Synthwave', 'Cyberpunk', 'K-Pop', 'Lo-Fi Chill', 'Melodic Death Metal', 'Cinematic Orchestral', 'Drift Phonk', 'Indie Folk', 'Retrowave', 'Progressive House']
+  },
+  vibe: {
+    label: 'Vibe',
+    tags: ['Ethereal', 'Dark Atmosphere', 'Euphoric', 'Nostalgic 80s', 'High Energy', 'Aggressive', 'Chill', 'Mysterious', 'Uplifting', 'Melancholic']
+  },
+  vocals: {
+    label: 'Vocals',
+    tags: ['Ethereal Female Vocals', 'Raspy Male Vocals', 'Auto-Tune', 'Harmonies', 'Vocal Chop', 'Operatic Vocals', 'Whispered Vocals', 'Rap Vocals', 'Soulful Vocals', 'Choir']
+  },
+  instruments: {
+    label: 'Instruments',
+    tags: ['Analog Synths', '808 Bass', 'Electric Guitar Solo', 'Acoustic Piano', 'Brushed Drums', 'Synthesizer Pad', 'String Quartet', 'Trap Hi-Hats', 'Bass Guitar', 'Orchestral Percussion']
+  },
+  production: {
+    label: 'Production',
+    tags: ['Studio Mastered', 'Low-Fidelity', 'Reverb', 'Sidechain Compression', 'Stereo Wide', 'Analog Warmth', 'Lo-Fi Crackle', 'Glitch Effects', 'Delay', 'Panning']
+  }
+};
+
+const AVAILABLE_TAGS = ['[Intro]', '[Verse 1]', '[Verse 2]', '[Pre-Chorus]', '[Chorus]', '[Bridge]', '[Guitar Solo]', '[Vocal Break]', '[Outro]'];
+const MAX_CHARS = 200;
+const WARN_THRESHOLD = 180;
+
+// ============================
+// STATE
+// ============================
+let lyricLines = [];
+let selectedStyleTags = [];
+let currentCategory = 'genre';
+let dragSrcIndex = null;
+
+// ============================
+// LYRICS PROCESSING
+// ============================
+function smartStructure() {
+  const textarea = document.getElementById('lyricsTextarea');
+  const rawText = textarea.value.trim();
+  if (!rawText) return;
+
+  const lines = rawText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+  lyricLines = [];
+
+  let idx = 0;
+  // [Intro] — first 2 lines
+  const introCount = Math.min(2, lines.length);
+  for (let i = 0; i < introCount; i++) {
+    lyricLines.push({ id: genId(), text: lines[idx++], tag: '[Intro]', harmony: false });
+  }
+
+  let verseNum = 1;
+  let isChorus = false;
+  while (idx < lines.length) {
+    const chunkSize = Math.min(4, lines.length - idx);
+    const tag = isChorus ? '[Chorus]' : `[Verse ${verseNum}]`;
+    for (let i = 0; i < chunkSize; i++) {
+      lyricLines.push({ id: genId(), text: lines[idx++], tag, harmony: false });
+    }
+    if (isChorus) verseNum++;
+    isChorus = !isChorus;
+  }
+
+  // Last 2 lines → [Outro]
+  if (lyricLines.length >= 2) {
+    const outroCount = Math.min(2, lyricLines.length);
+    for (let i = lyricLines.length - outroCount; i < lyricLines.length; i++) {
+      if (lyricLines[i].tag !== '[Chorus]' || i >= lyricLines.length - 2) {
+        lyricLines[i].tag = '[Outro]';
+      }
+    }
+  }
+
+  renderLyricCards();
+  document.getElementById('lyricsInputArea').classList.add('hidden');
+  document.getElementById('lyricsCardsArea').classList.remove('hidden');
+}
+
+function genId() { return Math.random().toString(36).substring(2, 9); }
+
+function renderLyricCards() {
+  const container = document.getElementById('lyricsCardsContainer');
+  container.innerHTML = lyricLines.map((line, i) => `
+    <div class="lyric-card bg-slate-800/50 border border-slate-700 rounded-xl p-3.5 hover:border-indigo-500/40 transition-all duration-200 cursor-grab active:cursor-grabbing group"
+         draggable="true"
+         data-index="${i}"
+         ondragstart="handleDragStart(event, ${i})"
+         ondragover="handleDragOver(event, ${i})"
+         ondragend="handleDragEnd(event)"
+         ondragleave="this.classList.remove('drag-over')"
+         style="animation-delay:${i * 40}ms">
+      <div class="flex items-center gap-3">
+        <svg class="w-4 h-4 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="5" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="19" r="1"/></svg>
+        
+        <div class="relative">
+          <button onclick="toggleTagDropdown(event, ${i})" class="flex items-center gap-1 px-2.5 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-xs font-semibold hover:bg-indigo-600/30 transition-colors whitespace-nowrap">
+            ${line.tag}
+            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div id="tagDropdown-${i}" class="hidden absolute top-full left-0 mt-1 w-40 bg-slate-800 border border-slate-700 rounded-xl shadow-2xl z-20 py-1 animate-fade-up">
+            ${AVAILABLE_TAGS.map(tag => `
+              <button onclick="changeTag(${i}, '${tag}')" class="w-full px-3.5 py-2 text-left text-sm hover:bg-slate-700 transition-colors ${line.tag === tag ? 'text-indigo-400 bg-slate-700/50' : 'text-slate-300'}">${tag}</button>
+            `).join('')}
+          </div>
+        </div>
+        
+        <span class="flex-1 text-sm ${line.harmony ? 'text-emerald-400' : 'text-slate-200'}">
+          ${line.harmony ? `(${line.text})` : line.text}
+        </span>
+        
+        <button onclick="toggleHarmony(${i})" class="p-1.5 rounded-lg transition-all duration-200 ${line.harmony ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-700/50 text-slate-500 hover:bg-slate-600/60 hover:text-slate-300'}" title="${line.harmony ? 'Remove harmony' : 'Add harmony (Backing Vocals)'}">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================
+// DRAG & DROP
+// ============================
+function handleDragStart(e, index) {
+  dragSrcIndex = index;
+  e.target.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+}
+
+function handleDragOver(e, index) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  if (dragSrcIndex !== null && dragSrcIndex !== index) {
+    const card = document.querySelector(`.lyric-card[data-index="${index}"]`);
+    if (card) card.classList.add('drag-over');
+  }
+}
+
+function handleDragEnd(e) {
+  e.target.classList.remove('dragging');
+  document.querySelectorAll('.lyric-card').forEach(c => c.classList.remove('drag-over'));
+  const targetCard = e.target.closest('.lyric-card');
+  if (!targetCard) { dragSrcIndex = null; return; }
+  const targetIndex = parseInt(targetCard.dataset.index);
+  if (dragSrcIndex !== null && dragSrcIndex !== targetIndex && !isNaN(targetIndex)) {
+    const [moved] = lyricLines.splice(dragSrcIndex, 1);
+    lyricLines.splice(targetIndex, 0, moved);
+    renderLyricCards();
+  }
+  dragSrcIndex = null;
+}
+
+// ============================
+// TAG DROPDOWN
+// ============================
+function toggleTagDropdown(e, index) {
+  e.stopPropagation();
+  const dd = document.getElementById(`tagDropdown-${index}`);
+  document.querySelectorAll('[id^="tagDropdown-"]').forEach(d => { if (d !== dd) d.classList.add('hidden'); });
+  dd.classList.toggle('hidden');
+}
+
+function changeTag(index, newTag) {
+  lyricLines[index].tag = newTag;
+  renderLyricCards();
+}
+
+function toggleHarmony(index) {
+  lyricLines[index].harmony = !lyricLines[index].harmony;
+  renderLyricCards();
+}
+
+// Close dropdowns on outside click
+document.addEventListener('click', () => {
+  document.querySelectorAll('[id^="tagDropdown-"]').forEach(d => d.classList.add('hidden'));
+});
+
+// ============================
+// COPY STRUCTURED LYRICS
+// ============================
+function copyStructuredLyrics() {
+  const text = lyricLines.map(l => {
+    const t = l.harmony ? `(${l.text})` : l.text;
+    return `${l.tag}\n${t}`;
+  }).join('\n\n');
+  copyWithFeedback(text, document.getElementById('copyLyricsBtn'));
+}
+
+function resetLyrics() {
+  lyricLines = [];
+  document.getElementById('lyricsTextarea').value = '';
+  document.getElementById('lyricsInputArea').classList.remove('hidden');
+  document.getElementById('lyricsCardsArea').classList.add('hidden');
+}
+
+// ============================
+// STYLE BUILDER
+// ============================
+function switchCategory(cat, btn) {
+  currentCategory = cat;
+  document.querySelectorAll('.cat-tab').forEach(b => {
+    b.classList.remove('bg-indigo-600', 'text-white');
+    b.classList.add('bg-slate-800', 'text-slate-400');
+  });
+  btn.classList.remove('bg-slate-800', 'text-slate-400');
+  btn.classList.add('bg-indigo-600', 'text-white');
+  renderTagGrid();
+}
+
+function renderTagGrid() {
+  const grid = document.getElementById('tagGrid');
+  const tags = TAG_CATEGORIES[currentCategory].tags;
+  grid.innerHTML = tags.map(tag => {
+    const isSelected = selectedStyleTags.includes(tag);
+    const cls = isSelected ? 'tag-chip selected' : 'tag-chip';
+    return `<button class="${cls} px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all duration-200 bg-slate-800 text-slate-400" onclick="toggleStyleTag('${tag.replace(/'/g, "\\'")}')">${tag}</button>`;
+  }).join('');
+}
+
+function toggleStyleTag(tag) {
+  const idx = selectedStyleTags.indexOf(tag);
+  if (idx > -1) {
+    selectedStyleTags.splice(idx, 1);
+  } else {
+    const testTags = [...selectedStyleTags, tag];
+    const testStr = testTags.join(', ');
+    if (testStr.length > MAX_CHARS) return;
+    selectedStyleTags.push(tag);
+  }
+  updatePromptOutput();
+  renderTagGrid();
+}
+
+function updatePromptOutput() {
+  const promptStr = selectedStyleTags.join(', ');
+  const charCount = promptStr.length;
+  const box = document.getElementById('promptOutputBox');
+  const counter = document.getElementById('charCounter');
+  const bar = document.getElementById('progressBar');
+  const isOver = charCount >= MAX_CHARS;
+  const isWarn = charCount >= WARN_THRESHOLD && charCount < MAX_CHARS;
+
+  if (promptStr) {
+    box.innerHTML = promptStr;
+    box.classList.remove('text-slate-600', 'italic');
+  } else {
+    box.innerHTML = '<span class="text-slate-600 italic">Click tags below to build your prompt...</span>';
+  }
+
+  counter.textContent = `${charCount} / ${MAX_CHARS}`;
+  counter.className = `text-xs font-mono ${isOver ? 'text-red-400' : isWarn ? 'text-yellow-400' : 'text-slate-500'}`;
+
+  box.className = `p-3 rounded-lg min-h-[56px] text-sm break-words ${isOver ? 'bg-red-500/10 border border-red-500/30 text-red-300 animate-shake' : isWarn ? 'bg-yellow-500/10 border border-yellow-500/30 text-yellow-200' : 'bg-slate-900/50 border border-transparent text-slate-300'}`;
+
+  bar.style.width = `${Math.min((charCount / MAX_CHARS) * 100, 100)}%`;
+  bar.className = `progress-bar h-full rounded-full ${isOver ? 'bg-red-500' : isWarn ? 'bg-yellow-500' : 'bg-indigo-500'}`;
+
+  if (isOver && !box.querySelector('.limit-msg')) {
+    const msg = document.createElement('div');
+    msg.className = 'limit-msg text-red-400 text-xs flex items-center gap-1.5 mt-1 font-medium';
+    msg.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg> Suno 200-char limit reached! Remove some tags.';
+    box.appendChild(msg);
+  }
+}
+
+// ============================
+// COPY STYLE PROMPT
+// ============================
+function copyStylePrompt() {
+  const promptStr = selectedStyleTags.join(', ');
+  if (!promptStr) return;
+  copyWithFeedback(promptStr, document.getElementById('copyStyleBtn'));
+}
+
+// ============================
+// CLIPBOARD WITH FEEDBACK
+// ============================
+function copyWithFeedback(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Copied!';
+    btn.classList.add('bg-emerald-500', 'text-white');
+    btn.classList.remove('bg-slate-700', 'hover:bg-slate-600', 'text-slate-200');
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.classList.remove('bg-emerald-500', 'text-white');
+      btn.classList.add('bg-slate-700', 'hover:bg-slate-600', 'text-slate-200');
+    }, 1500);
+  });
+}
+
+// ============================
+// INIT
+// ============================
+renderTagGrid();
+</script>
+
+</body>
+</html>
