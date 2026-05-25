@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Music Guides — Suno & Udio Tutorials, Tips & Best Practices | AI Music Prompt Studio</title>
+<meta name="description" content="Comprehensive guides for AI music creation with Suno and Udio. Learn meta tags, style prompt formulas, lyrics formatting, troubleshooting clunky AI music, Suno vs Udio comparison. Free educational resources.">
+<meta name="keywords" content="suno meta tags, udio prompt, ai music lyrics, suno style builder, tag stacking, background vocals suno">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aimusicprompt.studio/guides.html">
+<meta property="og:title" content="AI Music Guides — Suno & Udio Tutorials & Tips">
+<meta property="og:description" content="Comprehensive guides for AI music creation with Suno and Udio. Learn meta tags, style prompt formulas, lyrics formatting, and more.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { neon: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' }, glow: { 400: '#34d399', 500: '#10b981' } } } }
+}
+</script>
+<link rel="stylesheet" href="src/common.css">
+<style>
+  .gradient-text {
+    background: linear-gradient(135deg, #818cf8, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .article-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .article-card:hover {
+    border-color: #6366f1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+  }
+  .article-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+  .article-card.expanded .article-body {
+    max-height: 4000px;
+    opacity: 1;
+    padding-top: 1.5rem;
+  }
+  .chevron {
+    transition: transform 0.3s ease;
+  }
+  .article-card.expanded .chevron {
+    transform: rotate(180deg);
+  }
+  .read-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+  }
+  .prose h3 {
+    color: #a5b4fc;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose p {
+    color: #cbd5e1;
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+  .prose ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: #cbd5e1;
+    line-height: 1.75;
+  }
+  .prose ul li {
+    margin-bottom: 0.25rem;
+  }
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .prose th {
+    background: #1e293b;
+    color: #a5b4fc;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    border: 1px solid #334155;
+  }
+  .prose td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #334155;
+    color: #cbd5e1;
+  }
+  .prose strong {
+    color: #e2e8f0;
+  }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen" data-page="guides">
+
+<div id="nav-placeholder"></div>
+
+<header class="border-b border-slate-800 bg-slate-950/80">
+  <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-100 tracking-tight"><span class="gradient-text">Guides</span> &amp; Articles</h1>
+    <p class="text-slate-500 text-sm mt-1">In-depth tutorials, tips, and best practices for mastering AI music generation</p>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Article 1 -->
+    <div class="article-card bg-slate-900 border border-slate-800 rounded-xl p-6 group" data-article="1">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex-1 min-w-0">
+          <h2 class="text-lg font-bold text-slate-100 mb-2 leading-snug">How to Use Meta Tags in Suno AI V5.5 for Perfect Song Structure</h2>
+          <p class="text-slate-400 text-sm mb-3 line-clamp-2">Master the complete Suno meta tags system to create professional song structures every time.</p>
+          <div class="flex items-center gap-3">
+            <span class="read-badge text-slate-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/></svg>
+              8 min read
+            </span>
+            <span class="text-neon-400 text-sm font-medium">Read More</span>
+          </div>
+        </div>
+        <svg class="chevron w-5 h-5 text-slate-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="article-body prose border-t border-slate-800 mt-0">
+        <p>When working with Suno AI V5.5, proper use of meta tags is crucial for achieving professional song structures. These tags help the AI understand where different sections of your song should begin and end. Without meta tags, Suno often generates unstructured, meandering tracks that lack the punch of a well-organized song.</p>
+
+        <h3>Key Meta Tags for Suno</h3>
+
+        <p><strong>[Intro]</strong> — Sets the mood and introduces the song. Keep it 2-4 lines with atmospheric or scene-setting lyrics. The intro is your song's first impression — make it count.</p>
+
+        <p><strong>[Verse 1]</strong> — The first verse, typically 4-6 lines establishing the narrative and introducing the main theme. This is where you hook the listener with story.</p>
+
+        <p><strong>[Pre-Chorus]</strong> — Builds tension leading into the chorus. 2-4 lines that increase emotional intensity. Not every song needs a pre-chorus, but it adds drama.</p>
+
+        <p><strong>[Chorus]</strong> — The main hook of the song, usually the most memorable and emotionally charged part. The chorus repeats and is what listeners remember most.</p>
+
+        <p><strong>[Verse 2]</strong> — Continues the story with new lyrics, often adding depth or a different perspective from the first verse.</p>
+
+        <p><strong>[Bridge]</strong> — A contrasting section that provides relief from repetition and introduces new musical ideas. Think of it as a "palate cleanser" before the final chorus.</p>
+
+        <p><strong>[Guitar Solo]</strong> — Instrumental break. Use this tag alone (no lyrics) and Suno generates a guitar solo. Great for rock, metal, and blues genres.</p>
+
+        <p><strong>[Outro]</strong> — The conclusion, often fading out or providing lyrical resolution. Always end with this tag for a polished, professional sound.</p>
+
+        <h3>Common Mistakes to Avoid</h3>
+        <ul>
+          <li>Overusing tags — stick to the essential structure</li>
+          <li>Making sections too long — keep chunks to 4-6 lines maximum</li>
+          <li>Forgetting the [Outro] — proper endings make songs feel complete</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Article 2 -->
+    <div class="article-card bg-slate-900 border border-slate-800 rounded-xl p-6 group" data-article="2">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex-1 min-w-0">
+          <h2 class="text-lg font-bold text-slate-100 mb-2 leading-snug">The Ultimate Suno &amp; Udio Style Prompt Formula (2026 Guide)</h2>
+          <p class="text-slate-400 text-sm mb-3 line-clamp-2">The proven formula for building perfect 200-character style prompts that produce consistent, high-quality results.</p>
+          <div class="flex items-center gap-3">
+            <span class="read-badge text-slate-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/></svg>
+              10 min read
+            </span>
+            <span class="text-neon-400 text-sm font-medium">Read More</span>
+          </div>
+        </div>
+        <svg class="chevron w-5 h-5 text-slate-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="article-body prose border-t border-slate-800 mt-0">
+        <p>Crafting the perfect style prompt is both an art and a science. With Suno and Udio's 200-character limit, every word counts.</p>
+
+        <h3>The Formula</h3>
+        <p><strong>[Genre] + [Vibe] + [Vocals] + [Instruments] + [Production]</strong></p>
+
+        <h3>Example Prompts</h3>
+        <p><strong>1. Synthwave:</strong> Synthwave, Nostalgic 80s, Ethereal Female Vocals, Analog Synths, 808 Bass, Reverb, Studio Mastered</p>
+        <p><strong>2. Cinematic:</strong> Cinematic Orchestral, Dark Atmosphere, Choir, String Quartet, Orchestral Percussion, Stereo Wide, Reverb</p>
+        <p><strong>3. Lo-Fi:</strong> Lo-Fi Chill, Chill, Whispered Vocals, Acoustic Piano, Brushed Drums, Low-Fidelity, Lo-Fi Crackle</p>
+
+        <h3>2026 Best Practices</h3>
+        <p>Mix 3-5 tags from different categories. Prioritize specific terms over generic ones. Use comma separation only. Focus on what you want, never what you don't want. Production tags like Sidechain Compression and Stereo Wide significantly impact sound quality in 2026 models.</p>
+      </div>
+    </div>
+
+    <!-- Article 3 -->
+    <div class="article-card bg-slate-900 border border-slate-800 rounded-xl p-6 group" data-article="3">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex-1 min-w-0">
+          <h2 class="text-lg font-bold text-slate-100 mb-2 leading-snug">Common Mistakes: Why Your AI Music Sounds Clunky</h2>
+          <p class="text-slate-400 text-sm mb-3 line-clamp-2">The 6 most common reasons AI-generated music fails and how to fix them immediately.</p>
+          <div class="flex items-center gap-3">
+            <span class="read-badge text-slate-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/></svg>
+              7 min read
+            </span>
+            <span class="text-neon-400 text-sm font-medium">Read More</span>
+          </div>
+        </div>
+        <svg class="chevron w-5 h-5 text-slate-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="article-body prose border-t border-slate-800 mt-0">
+        <p>Even experienced users encounter frustrating issues. Here are the most frequent mistakes and solutions:</p>
+
+        <p><strong>1. Overloading the Prompt</strong> — Stick to 3-5 complementary tags. Conflicting styles confuse the AI.</p>
+        <p><strong>2. Poor Lyrics Formatting</strong> — Always use meta tags with sections 4-6 lines max.</p>
+        <p><strong>3. Ignoring Character Limits</strong> — Suno silently truncates prompts over 200 characters.</p>
+        <p><strong>4. Missing Backing Vocals</strong> — Wrap harmonies in parentheses for depth.</p>
+        <p><strong>5. Unclear Genre Direction</strong> — Lead with your primary genre, reinforce with matching tags.</p>
+        <p><strong>6. No Production Tags</strong> — "Studio Mastered" and "Reverb" polish the sound dramatically.</p>
+      </div>
+    </div>
+
+    <!-- Article 4 -->
+    <div class="article-card bg-slate-900 border border-slate-800 rounded-xl p-6 group" data-article="4">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex-1 min-w-0">
+          <h2 class="text-lg font-bold text-slate-100 mb-2 leading-snug">Suno vs Udio: Platform Comparison 2026</h2>
+          <p class="text-slate-400 text-sm mb-3 line-clamp-2">Head-to-head comparison of prompt handling, audio quality, and feature differences.</p>
+          <div class="flex items-center gap-3">
+            <span class="read-badge text-slate-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/></svg>
+              6 min read
+            </span>
+            <span class="text-neon-400 text-sm font-medium">Read More</span>
+          </div>
+        </div>
+        <svg class="chevron w-5 h-5 text-slate-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="article-body prose border-t border-slate-800 mt-0">
+        <table>
+          <thead>
+            <tr><th>Feature</th><th>Suno V5.5</th><th>Udio V4</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Style Prompt Limit</td><td>200 chars</td><td>200 chars</td></tr>
+            <tr><td>Meta Tags Support</td><td>Full [Verse]/[Chorus]</td><td>Full</td></tr>
+            <tr><td>Production Tags</td><td>Basic</td><td>Advanced (Sidechain, Glitch)</td></tr>
+            <tr><td>Audio Quality</td><td>Up to 192kbps</td><td>Up to 320kbps</td></tr>
+            <tr><td>Guitar Solo</td><td>Via [Guitar Solo] tag</td><td>Via [Guitar Solo] tag</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Article 5 -->
+    <div class="article-card bg-slate-900 border border-slate-800 rounded-xl p-6 group" data-article="5">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex-1 min-w-0">
+          <h2 class="text-lg font-bold text-slate-100 mb-2 leading-snug">Advanced Tag Stacking for Professional Production</h2>
+          <p class="text-slate-400 text-sm mb-3 line-clamp-2">Go beyond basics with advanced tag stacking techniques used by pro AI music producers.</p>
+          <div class="flex items-center gap-3">
+            <span class="read-badge text-slate-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/></svg>
+              8 min read
+            </span>
+            <span class="text-neon-400 text-sm font-medium">Read More</span>
+          </div>
+        </div>
+        <svg class="chevron w-5 h-5 text-slate-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="article-body prose border-t border-slate-800 mt-0">
+        <p>Once you've mastered the basics, advanced tag stacking unlocks a new level of control over your AI-generated music. Professional producers use these techniques to achieve consistent, high-quality results.</p>
+
+        <h3>Layering Multiple Vibe Tags</h3>
+        <p>Instead of a single vibe descriptor, stack 2-3 complementary vibe tags for richer emotional depth. For example: <strong>Melancholic, Hopeful, Cinematic</strong> creates a bittersweet tone that a single tag cannot achieve. The AI blends these directions, producing more nuanced musical results.</p>
+
+        <h3>Production Tags as Secret Sauce</h3>
+        <p>Production tags are the most overlooked category. Advanced producers always include at least two: one for overall polish (<strong>Studio Mastered, High Fidelity</strong>) and one for spatial character (<strong>Stereo Wide, Warm Reverb</strong>). For Udio specifically, <strong>Sidechain Compression</strong> and <strong>Analog Warmth</strong> produce dramatically different results.</p>
+
+        <h3>Genre Fusion Techniques</h3>
+        <p>Combine two genre tags with one vibe tag to create unique hybrid styles: <strong>Synthwave, Metal, Dark</strong> yields cyber-metal; <strong>Jazz, Hip Hop, Chill</strong> produces lo-fi jazz hop. The key is leading with the dominant genre and using the secondary genre as a modifier.</p>
+
+        <h3>Avoiding Tag Conflicts</h3>
+        <p>Not all tags play well together. Avoid pairing opposing vibes (e.g., "Energetic" + "Calm"), conflicting vocal styles ("Growled Vocals" + "Whispered"), and tempo clashes ("Fast Tempo" + "Slow Burn"). When in doubt, test the combination in isolation before committing.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="src/shared.js"></script>
+<script>
+(function() {
+  var cards = document.querySelectorAll('.article-card');
+
+  cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      var isExpanded = card.classList.contains('expanded');
+
+      cards.forEach(function(c) {
+        c.classList.remove('expanded');
+      });
+
+      if (!isExpanded) {
+        card.classList.add('expanded');
+      }
+    });
+  });
+
+  cards.forEach(function(card) {
+    var body = card.querySelector('.article-body');
+    if (body) {
+      body.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>

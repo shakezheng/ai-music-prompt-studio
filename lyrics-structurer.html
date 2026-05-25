@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyrics Structurer — Smart AI Song Structure Tool for Suno & Udio | AI Music Prompt Studio</title>
+<meta name="description" content="Free lyrics structurer for Suno AI and Udio. Auto-split raw lyrics into structured sections with [Intro], [Verse], [Chorus], [Bridge], [Guitar Solo], [Outro] meta tags. Drag-and-drop reorder, tag switching, harmony toggle. 100% client-side, no signup.">
+<meta name="keywords" content="suno meta tags, udio prompt, ai music lyrics, suno style builder, tag stacking">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aimusicprompt.studio/lyrics-structurer.html">
+<meta property="og:title" content="Lyrics Structurer — Smart AI Song Structure Tool for Suno & Udio">
+<meta property="og:description" content="Free lyrics structurer for Suno AI and Udio. Auto-split raw lyrics into structured sections with meta tags. Drag-and-drop reorder, tag switching, harmony toggle. 100% client-side, no signup.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { neon: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' }, glow: { 400: '#34d399', 500: '#10b981' } } } }
+}
+</script>
+<link rel="stylesheet" href="src/common.css">
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen" data-page="lyrics">
+
+<div id="nav-placeholder"></div>
+
+<header class="border-b border-slate-800 bg-slate-950/80">
+  <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-100 tracking-tight"><span class="gradient-text">Lyrics</span> Structurer</h1>
+    <p class="text-slate-500 text-sm mt-1">Paste raw lyrics &mdash; get perfectly structured sections with meta tags in seconds</p>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-8">
+
+  <div id="lyricsInputArea" class="mb-6">
+    <textarea id="lyricsTextarea" rows="16" placeholder="Paste your raw lyrics here... (one line per row)"
+      class="w-full bg-slate-800/60 border border-slate-700 rounded-xl p-5 text-slate-200 placeholder-slate-600 resize-none text-sm focus:outline-none focus:border-indigo-500/60 transition-colors font-mono leading-relaxed"></textarea>
+    <button id="smartStructureBtn" onclick="smartStructure()"
+      class="mt-4 w-full py-4 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 disabled:from-slate-700 disabled:to-slate-600 disabled:text-slate-500 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/20 text-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275Z"/></svg>
+      Smart Structure
+    </button>
+  </div>
+
+  <div id="lyricsCardsArea" class="hidden">
+    <div id="lyricsToolbar" class="flex flex-wrap items-center gap-2 mb-4">
+      <button onclick="insertSpecialCard('[Guitar Solo]')"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-sm font-semibold transition-all duration-200 border border-slate-700 flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        Add Guitar Solo
+      </button>
+      <button onclick="insertSpecialCard('[Bridge]')"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-sm font-semibold transition-all duration-200 border border-slate-700 flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+        Add Bridge
+      </button>
+      <div class="flex-1"></div>
+      <button onclick="resetLyrics()"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-xl text-sm font-semibold transition-all duration-200 border border-slate-700">
+        Reset
+      </button>
+      <button id="copyLyricsBtn" onclick="copyStructuredLyrics()"
+        class="px-5 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-1.5 border border-slate-600">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+        Copy Structured Lyrics
+      </button>
+    </div>
+
+    <div id="lyricsCardsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-2.5"></div>
+  </div>
+
+  <section class="mt-12 bg-slate-900/40 border border-slate-800 rounded-2xl p-6 md:p-8">
+    <h2 class="text-xl font-bold text-slate-100 mb-5 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      Pro Tips for Suno AI Lyrics
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <h3 class="text-sm font-semibold text-indigo-400 mb-1">Keep sections 4-6 lines</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Shorter sections help Suno maintain focus. Overly long blocks cause the AI to lose structural coherence and meander.</p>
+      </div>
+      <div class="bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <h3 class="text-sm font-semibold text-indigo-400 mb-1">Strongest lyrics in [Chorus]</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">The chorus is what Suno emphasizes most. Put your most memorable and emotionally charged lines here for maximum impact.</p>
+      </div>
+      <div class="bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <h3 class="text-sm font-semibold text-indigo-400 mb-1">Use (parentheses) for harmonies</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Wrap backing vocals in parentheses to tell Suno to layer them as harmonies behind the main vocal line.</p>
+      </div>
+      <div class="bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <h3 class="text-sm font-semibold text-indigo-400 mb-1">Don't skip [Outro]</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">A proper ending makes songs feel complete. Always include an outro section for professional-sounding results.</p>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center">
+      <button onclick="loadSampleLyrics()"
+        class="px-6 py-3 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-400 rounded-xl text-sm font-semibold transition-all duration-200 border border-indigo-500/30">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="inline mr-1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        Load Sample Lyrics
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="src/shared.js"></script>
+
+<script>
+const AVAILABLE_TAGS = ['[Intro]', '[Verse 1]', '[Verse 2]', '[Pre-Chorus]', '[Chorus]', '[Bridge]', '[Guitar Solo]', '[Vocal Break]', '[Outro]'];
+
+let lyricLines = [];
+let dragSrcIndex = null;
+
+function genId() { return Math.random().toString(36).substring(2, 9); }
+
+function smartStructure() {
+  const textarea = document.getElementById('lyricsTextarea');
+  const rawText = textarea.value.trim();
+  if (!rawText) return;
+
+  const lines = rawText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+  lyricLines = [];
+
+  let idx = 0;
+  const introCount = Math.min(2, lines.length);
+  for (let i = 0; i < introCount; i++) {
+    lyricLines.push({ id: genId(), text: lines[idx++], tag: '[Intro]', harmony: false });
+  }
+
+  let verseNum = 1;
+  let isChorus = false;
+  while (idx < lines.length) {
+    const chunkSize = Math.min(4, lines.length - idx);
+    const tag = isChorus ? '[Chorus]' : `[Verse ${verseNum}]`;
+    for (let i = 0; i < chunkSize; i++) {
+      lyricLines.push({ id: genId(), text: lines[idx++], tag, harmony: false });
+    }
+    if (isChorus) verseNum++;
+    isChorus = !isChorus;
+  }
+
+  if (lyricLines.length >= 2) {
+    const outroCount = Math.min(2, lyricLines.length);
+    for (let i = lyricLines.length - outroCount; i < lyricLines.length; i++) {
+      lyricLines[i].tag = '[Outro]';
+    }
+  }
+
+  renderLyricCards();
+  document.getElementById('lyricsInputArea').classList.add('hidden');
+  document.getElementById('lyricsCardsArea').classList.remove('hidden');
+}
+
+function renderLyricCards() {
+  const container = document.getElementById('lyricsCardsContainer');
+  container.innerHTML = lyricLines.map((line, i) => `
+    <div class="lyric-card bg-slate-800/50 border border-slate-700 rounded-xl p-3.5 hover:border-indigo-500/40 transition-all duration-200 cursor-grab active:cursor-grabbing group"
+         draggable="true"
+         data-index="${i}"
+         ondragstart="handleDragStart(event, ${i})"
+         ondragover="handleDragOver(event, ${i})"
+         ondragend="handleDragEnd(event)"
+         ondragleave="this.classList.remove('drag-over')"
+         style="animation-delay:${i * 40}ms">
+      <div class="flex items-center gap-3">
+        <svg class="w-4 h-4 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="5" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="9" cy="19" r="1"/><circle cx="15" cy="19" r="1"/></svg>
+
+        <div class="relative">
+          <button onclick="toggleTagDropdown(event, ${i})" class="flex items-center gap-1 px-2.5 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-xs font-semibold hover:bg-indigo-600/30 transition-colors whitespace-nowrap">
+            ${line.tag}
+            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div id="tagDropdown-${i}" class="hidden absolute top-full left-0 mt-1 w-40 bg-slate-800 border border-slate-700 rounded-xl shadow-2xl z-20 py-1 animate-fade-up">
+            ${AVAILABLE_TAGS.map(tag => `
+              <button onclick="changeTag(${i}, '${tag}')" class="w-full px-3.5 py-2 text-left text-sm hover:bg-slate-700 transition-colors ${line.tag === tag ? 'text-indigo-400 bg-slate-700/50' : 'text-slate-300'}">${tag}</button>
+            `).join('')}
+          </div>
+        </div>
+
+        <span class="flex-1 text-sm ${line.harmony ? 'text-emerald-400' : 'text-slate-200'}">
+          ${line.harmony ? `(${line.text})` : line.text}
+        </span>
+
+        <button onclick="toggleHarmony(${i})" class="p-1.5 rounded-lg transition-all duration-200 ${line.harmony ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-700/50 text-slate-500 hover:bg-slate-600/60 hover:text-slate-300'}" title="${line.harmony ? 'Remove harmony' : 'Add harmony (Backing Vocals)'}">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function handleDragStart(e, index) {
+  dragSrcIndex = index;
+  e.target.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+}
+
+function handleDragOver(e, index) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  if (dragSrcIndex !== null && dragSrcIndex !== index) {
+    const card = document.querySelector(`.lyric-card[data-index="${index}"]`);
+    if (card) card.classList.add('drag-over');
+  }
+}
+
+function handleDragEnd(e) {
+  e.target.classList.remove('dragging');
+  document.querySelectorAll('.lyric-card').forEach(c => c.classList.remove('drag-over'));
+  const targetCard = e.target.closest('.lyric-card');
+  if (!targetCard) { dragSrcIndex = null; return; }
+  const targetIndex = parseInt(targetCard.dataset.index);
+  if (dragSrcIndex !== null && dragSrcIndex !== targetIndex && !isNaN(targetIndex)) {
+    const [moved] = lyricLines.splice(dragSrcIndex, 1);
+    lyricLines.splice(targetIndex, 0, moved);
+    renderLyricCards();
+  }
+  dragSrcIndex = null;
+}
+
+function toggleTagDropdown(e, index) {
+  e.stopPropagation();
+  const dd = document.getElementById(`tagDropdown-${index}`);
+  document.querySelectorAll('[id^="tagDropdown-"]').forEach(d => { if (d !== dd) d.classList.add('hidden'); });
+  dd.classList.toggle('hidden');
+}
+
+function changeTag(index, newTag) {
+  lyricLines[index].tag = newTag;
+  renderLyricCards();
+}
+
+function toggleHarmony(index) {
+  lyricLines[index].harmony = !lyricLines[index].harmony;
+  renderLyricCards();
+}
+
+function insertSpecialCard(tag) {
+  lyricLines.push({ id: genId(), text: '', tag, harmony: false });
+  renderLyricCards();
+  lyricLines[lyricLines.length - 1].text = '';
+  window.scrollTo({ top: document.getElementById('lyricsCardsContainer').scrollHeight, behavior: 'smooth' });
+}
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('[id^="tagDropdown-"]').forEach(d => d.classList.add('hidden'));
+});
+
+function copyStructuredLyrics() {
+  const text = lyricLines.map(l => {
+    const t = l.harmony ? `(${l.text})` : l.text;
+    return `${l.tag}\n${t}`;
+  }).join('\n\n');
+  copyWithFeedback(text, document.getElementById('copyLyricsBtn'));
+}
+
+function resetLyrics() {
+  lyricLines = [];
+  document.getElementById('lyricsTextarea').value = '';
+  document.getElementById('lyricsInputArea').classList.remove('hidden');
+  document.getElementById('lyricsCardsArea').classList.add('hidden');
+}
+
+function loadSampleLyrics() {
+  const sample = `Neon lights are calling me tonight
+Walking through the city, everything feels right
+I see your shadow dancing in the glow
+A familiar face from long ago
+
+We used to run these streets together
+Thought our world would last forever
+Now the buildings all look different here
+But your memory is still so clear
+
+And I'm a neon dreamer, lost in the light
+Chasing every moment through the endless night
+The city never sleeps and neither do I
+A neon dreamer underneath the sky
+
+The coffee shop is gone, replaced by glass and steel
+Funny how the years can make you feel
+Like a stranger in your own hometown
+Watching all the walls come down
+
+But every corner holds a piece of you
+In every sunset, every shade of blue
+The city changed but my heart stayed the same
+Still whispering your name
+
+And I'm a neon dreamer, lost in the light
+Chasing every moment through the endless night
+The city never sleeps and neither do I
+A neon dreamer underneath the sky
+
+Maybe someday when the stars align
+I'll find my way back to a different time
+Until then I'll keep walking on
+Through the night until the dawn
+
+So I walk, walk, walk alone
+The only world I've ever known
+The neon fades but I remain
+Dreaming in the quiet rain`;
+  document.getElementById('lyricsTextarea').value = sample;
+  document.getElementById('lyricsTextarea').scrollIntoView({ behavior: 'smooth' });
+}
+
+function copyWithFeedback(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Copied!';
+    btn.classList.add('bg-emerald-500', 'text-white');
+    btn.classList.remove('bg-slate-700', 'hover:bg-slate-600', 'text-slate-200');
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.classList.remove('bg-emerald-500', 'text-white');
+      btn.classList.add('bg-slate-700', 'hover:bg-slate-600', 'text-slate-200');
+    }, 1500);
+  });
+}
+</script>
+
+</body>
+</html>

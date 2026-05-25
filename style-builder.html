@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Prompt Builder — AI Music Genre & Tag Palette for Suno/Udio | AI Music Prompt Studio</title>
+<meta name="description" content="Build perfect Suno and Udio style prompts with our interactive tag palette. 50+ curated genre, vibe, vocals, instruments, and production tags. Real-time 200-character limit counter. No signup, 100% free.">
+<meta name="keywords" content="suno meta tags, udio prompt, ai music lyrics, suno style builder, tag stacking">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aimusicprompt.studio/style-builder.html">
+<meta property="og:title" content="Style Prompt Builder — Genre Tag Palette for Suno/Udio">
+<meta property="og:description" content="Build perfect Suno and Udio style prompts with our interactive tag palette. 50+ curated genre, vibe, vocals, instruments, and production tags. Real-time 200-character limit counter. No signup, 100% free.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { neon: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' }, glow: { 400: '#34d399', 500: '#10b981' } } } }
+}
+</script>
+<link rel="stylesheet" href="src/common.css">
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen" data-page="style">
+
+<div id="nav-placeholder"></div>
+
+<header class="border-b border-slate-800 bg-slate-950/80">
+  <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-100 tracking-tight"><span class="gradient-text">Style-of-Music</span> Builder</h1>
+    <p class="text-slate-500 text-sm mt-1">Stack genre &amp; production tags &mdash; built for the 200-char Suno limit</p>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-8">
+
+  <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 mb-6">
+    <div class="flex justify-between items-center mb-3">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Style Prompt Output</span>
+      <span id="charCounter" class="text-xs font-mono text-slate-500">0 / 200</span>
+    </div>
+    <div id="promptOutputBox" class="p-4 rounded-xl min-h-[64px] text-base text-slate-300 border border-transparent bg-slate-900/50 break-words">
+      <span class="text-slate-600 italic">Click tags below to build your prompt...</span>
+    </div>
+    <div class="mt-4 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+      <div id="progressBar" class="progress-bar h-full bg-indigo-500 rounded-full" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <div id="styleCategories" class="flex gap-1.5 mb-5 overflow-x-auto pb-1">
+    <button class="cat-tab px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-semibold whitespace-nowrap transition-all" data-cat="genre" onclick="switchCategory('genre', this)">&#x1F3B8; Genre</button>
+    <button class="cat-tab px-4 py-2 bg-slate-800 text-slate-400 rounded-lg text-sm font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="vibe" onclick="switchCategory('vibe', this)">&#x2728; Vibe</button>
+    <button class="cat-tab px-4 py-2 bg-slate-800 text-slate-400 rounded-lg text-sm font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="vocals" onclick="switchCategory('vocals', this)">&#x1F3A4; Vocals</button>
+    <button class="cat-tab px-4 py-2 bg-slate-800 text-slate-400 rounded-lg text-sm font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="instruments" onclick="switchCategory('instruments', this)">&#x1F3B9; Instruments</button>
+    <button class="cat-tab px-4 py-2 bg-slate-800 text-slate-400 rounded-lg text-sm font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="production" onclick="switchCategory('production', this)">&#x1F39B; Production</button>
+    <button class="cat-tab px-4 py-2 bg-slate-800 text-slate-400 rounded-lg text-sm font-semibold whitespace-nowrap transition-all hover:bg-slate-700" data-cat="presets" onclick="switchCategory('presets', this)">&#x1F4CB; Presets</button>
+  </div>
+
+  <div id="tagGrid" class="grid grid-cols-2 md:grid-cols-3 gap-2.5 mb-5"></div>
+
+  <div id="presetsGrid" class="hidden grid grid-cols-1 md:grid-cols-3 gap-4 mb-5"></div>
+
+  <button id="copyStyleBtn" onclick="copyStylePrompt()"
+    class="w-full py-3 bg-slate-700 hover:bg-slate-600 disabled:bg-slate-800 disabled:text-slate-600 disabled:cursor-not-allowed text-slate-200 font-semibold rounded-xl transition-all duration-200 flex items-center justify-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+    Copy Style Prompt
+  </button>
+
+  <section class="mt-12 bg-slate-900/40 border border-slate-800 rounded-2xl p-6 md:p-8">
+    <h2 class="text-xl font-bold text-slate-100 mb-5 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      Style Prompt Pro Tips
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <h3 class="text-sm font-semibold text-indigo-400 mb-1">3-5 tags max</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Suno and Udio work best with 3 to 5 complementary tags. Overloading confuses the AI and produces inconsistent results.</p>
+      </div>
+      <div class="bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <h3 class="text-sm font-semibold text-indigo-400 mb-1">Genre first always</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Lead with your main genre. The first tag carries the most weight in directing the AI's musical style generation.</p>
+      </div>
+      <div class="bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <h3 class="text-sm font-semibold text-indigo-400 mb-1">No negation</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Describe what you want, not what you don't want. AI models interpret negative prompts poorly and often ignore them.</p>
+      </div>
+      <div class="bg-slate-800/40 border border-slate-700 rounded-xl p-4">
+        <h3 class="text-sm font-semibold text-indigo-400 mb-1">Production tags matter</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Adding Studio Mastered, Reverb, or Stereo Wide can dramatically improve output quality and polish.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="src/shared.js"></script>
+
+<script>
+const TAG_CATEGORIES = {
+  genre: {
+    label: 'Genre',
+    tags: ['Synthwave', 'Cyberpunk', 'K-Pop', 'Lo-Fi Chill', 'Melodic Death Metal', 'Cinematic Orchestral', 'Drift Phonk', 'Indie Folk', 'Retrowave', 'Progressive House']
+  },
+  vibe: {
+    label: 'Vibe',
+    tags: ['Ethereal', 'Dark Atmosphere', 'Euphoric', 'Nostalgic 80s', 'High Energy', 'Aggressive', 'Chill', 'Mysterious', 'Uplifting', 'Melancholic']
+  },
+  vocals: {
+    label: 'Vocals',
+    tags: ['Ethereal Female Vocals', 'Raspy Male Vocals', 'Auto-Tune', 'Harmonies', 'Vocal Chop', 'Operatic Vocals', 'Whispered Vocals', 'Rap Vocals', 'Soulful Vocals', 'Choir']
+  },
+  instruments: {
+    label: 'Instruments',
+    tags: ['Analog Synths', '808 Bass', 'Electric Guitar Solo', 'Acoustic Piano', 'Brushed Drums', 'Synthesizer Pad', 'String Quartet', 'Trap Hi-Hats', 'Bass Guitar', 'Orchestral Percussion']
+  },
+  production: {
+    label: 'Production',
+    tags: ['Studio Mastered', 'Low-Fidelity', 'Reverb', 'Sidechain Compression', 'Stereo Wide', 'Analog Warmth', 'Lo-Fi Crackle', 'Glitch Effects', 'Delay', 'Panning']
+  }
+};
+
+const PRESETS = [
+  { name: 'Synthwave Dreamer', tags: 'Synthwave, Nostalgic 80s, Ethereal Female Vocals, Analog Synths, 808 Bass, Reverb' },
+  { name: 'Cinematic Epic', tags: 'Cinematic Orchestral, Dark Atmosphere, Choir, String Quartet, Orchestral Percussion, Stereo Wide' },
+  { name: 'Lo-Fi Study Beats', tags: 'Lo-Fi Chill, Chill, Whispered Vocals, Acoustic Piano, Brushed Drums, Low-Fidelity' },
+  { name: 'K-Pop Banger', tags: 'K-Pop, High Energy, Auto-Tune, 808 Bass, Synthesizer Pad, Sidechain Compression' },
+  { name: 'Cyberpunk Assault', tags: 'Cyberpunk, Aggressive, Vocal Chop, Analog Synths, Trap Hi-Hats, Glitch Effects' },
+  { name: 'Melancholic Metal', tags: 'Melodic Death Metal, Dark Atmosphere, Raspy Male Vocals, Electric Guitar Solo, Bass Guitar, Studio Mastered' }
+];
+
+const MAX_CHARS = 200;
+const WARN_THRESHOLD = 180;
+
+let selectedStyleTags = [];
+let currentCategory = 'genre';
+
+function switchCategory(cat, btn) {
+  currentCategory = cat;
+  document.querySelectorAll('.cat-tab').forEach(b => {
+    b.classList.remove('bg-indigo-600', 'text-white');
+    b.classList.add('bg-slate-800', 'text-slate-400');
+  });
+  btn.classList.remove('bg-slate-800', 'text-slate-400');
+  btn.classList.add('bg-indigo-600', 'text-white');
+
+  if (cat === 'presets') {
+    document.getElementById('tagGrid').classList.add('hidden');
+    document.getElementById('presetsGrid').classList.remove('hidden');
+    renderPresets();
+  } else {
+    document.getElementById('tagGrid').classList.remove('hidden');
+    document.getElementById('presetsGrid').classList.add('hidden');
+    renderTagGrid();
+  }
+}
+
+function renderTagGrid() {
+  const grid = document.getElementById('tagGrid');
+  const tags = TAG_CATEGORIES[currentCategory].tags;
+  grid.innerHTML = tags.map(tag => {
+    const isSelected = selectedStyleTags.includes(tag);
+    const cls = isSelected ? 'tag-chip selected' : 'tag-chip';
+    return `<button class="${cls} px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all duration-200 bg-slate-800 text-slate-400" onclick="toggleStyleTag('${tag.replace(/'/g, "\\'")}')">${tag}</button>`;
+  }).join('');
+}
+
+function renderPresets() {
+  const grid = document.getElementById('presetsGrid');
+  grid.innerHTML = PRESETS.map((preset, idx) => `
+    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 hover:border-indigo-500/30 transition-all duration-200 flex flex-col">
+      <h3 class="text-sm font-bold text-slate-200 mb-2">${preset.name}</h3>
+      <p class="text-xs text-slate-400 leading-relaxed mb-3 flex-1">${preset.tags}</p>
+      <button onclick="usePreset(${idx})"
+        class="w-full py-2 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-400 rounded-lg text-xs font-semibold transition-all duration-200 border border-indigo-500/20">
+        Use This
+      </button>
+    </div>
+  `).join('');
+}
+
+function toggleStyleTag(tag) {
+  const idx = selectedStyleTags.indexOf(tag);
+  if (idx > -1) {
+    selectedStyleTags.splice(idx, 1);
+  } else {
+    const testTags = [...selectedStyleTags, tag];
+    const testStr = testTags.join(', ');
+    if (testStr.length > MAX_CHARS) return;
+    selectedStyleTags.push(tag);
+  }
+  updatePromptOutput();
+  renderTagGrid();
+}
+
+function usePreset(presetIdx) {
+  const preset = PRESETS[presetIdx];
+  selectedStyleTags = preset.tags.split(', ');
+  updatePromptOutput();
+  switchCategory('genre', document.querySelector('[data-cat="genre"]'));
+}
+
+function updatePromptOutput() {
+  const promptStr = selectedStyleTags.join(', ');
+  const charCount = promptStr.length;
+  const box = document.getElementById('promptOutputBox');
+  const counter = document.getElementById('charCounter');
+  const bar = document.getElementById('progressBar');
+  const isOver = charCount >= MAX_CHARS;
+  const isWarn = charCount >= WARN_THRESHOLD && charCount < MAX_CHARS;
+
+  if (promptStr) {
+    box.innerHTML = promptStr;
+    box.classList.remove('text-slate-600', 'italic');
+  } else {
+    box.innerHTML = '<span class="text-slate-600 italic">Click tags below to build your prompt...</span>';
+  }
+
+  counter.textContent = `${charCount} / ${MAX_CHARS}`;
+  counter.className = `text-xs font-mono ${isOver ? 'text-red-400' : isWarn ? 'text-yellow-400' : 'text-slate-500'}`;
+
+  box.className = `p-4 rounded-xl min-h-[64px] text-base break-words ${isOver ? 'bg-red-500/10 border border-red-500/30 text-red-300 animate-shake' : isWarn ? 'bg-yellow-500/10 border border-yellow-500/30 text-yellow-200' : 'bg-slate-900/50 border border-transparent text-slate-300'}`;
+
+  bar.style.width = `${Math.min((charCount / MAX_CHARS) * 100, 100)}%`;
+  bar.className = `progress-bar h-full rounded-full ${isOver ? 'bg-red-500' : isWarn ? 'bg-yellow-500' : 'bg-indigo-500'}`;
+
+  if (isOver && !box.querySelector('.limit-msg')) {
+    const msg = document.createElement('div');
+    msg.className = 'limit-msg text-red-400 text-xs flex items-center gap-1.5 mt-1 font-medium';
+    msg.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg> Suno 200-char limit reached! Remove some tags.';
+    box.appendChild(msg);
+  }
+
+  const copyBtn = document.getElementById('copyStyleBtn');
+  if (promptStr) {
+    copyBtn.disabled = false;
+    copyBtn.classList.remove('bg-slate-800', 'text-slate-600', 'cursor-not-allowed');
+    copyBtn.classList.add('bg-slate-700', 'hover:bg-slate-600', 'text-slate-200');
+  } else {
+    copyBtn.disabled = true;
+  }
+}
+
+function copyStylePrompt() {
+  const promptStr = selectedStyleTags.join(', ');
+  if (!promptStr) return;
+  copyWithFeedback(promptStr, document.getElementById('copyStyleBtn'));
+}
+
+function copyWithFeedback(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Copied!';
+    btn.classList.add('bg-emerald-500', 'text-white');
+    btn.classList.remove('bg-slate-700', 'hover:bg-slate-600', 'text-slate-200');
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.classList.remove('bg-emerald-500', 'text-white');
+      btn.classList.add('bg-slate-700', 'hover:bg-slate-600', 'text-slate-200');
+    }, 1500);
+  });
+}
+
+renderTagGrid();
+</script>
+
+</body>
+</html>

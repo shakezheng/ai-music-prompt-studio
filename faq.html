@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Suno AI & Udio Frequently Asked Questions | AI Music Prompt Studio</title>
+<meta name="description" content="Answers to the most common questions about Suno AI and Udio music generation. Learn about meta tags, style prompts, character limits, backing vocals, guitar solos, and more.">
+<meta name="keywords" content="suno meta tags, udio prompt, ai music lyrics, suno style builder, tag stacking, background vocals suno">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aimusicprompt.studio/faq.html">
+<meta property="og:title" content="FAQ — Suno AI & Udio Frequently Asked Questions">
+<meta property="og:description" content="Answers to the most common questions about Suno AI and Udio music generation. Learn about meta tags, style prompts, character limits, and more.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { neon: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' }, glow: { 400: '#34d399', 500: '#10b981' } } } }
+}
+</script>
+<link rel="stylesheet" href="src/common.css">
+<style>
+  .gradient-text {
+    background: linear-gradient(135deg, #818cf8, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .faq-item {
+    border: 1px solid #1e293b;
+    border-radius: 0.75rem;
+    background: #0f172a;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .faq-item:hover {
+    border-color: #334155;
+  }
+  .faq-item.active {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3);
+  }
+  .faq-question {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .faq-question:hover {
+    color: #a5b4fc;
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.45s ease;
+    padding: 0 1.5rem;
+  }
+  .faq-item.active .faq-answer {
+    max-height: 800px;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+  .faq-icon {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+    flex-shrink: 0;
+  }
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    background-color: #6366f1;
+    color: #fff;
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to add guitar solo in Suno AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Insert the [Guitar Solo] meta tag as a standalone section in your lyrics — typically between [Verse 2] and [Chorus]. This tells Suno AI to generate an instrumental guitar break at that exact spot. The tag works for any genre but produces the best results in rock, metal, and synthwave. Combine with instrumental tags like \"Electric Guitar Solo\" in your style prompt for enhanced results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Suno AI meta tags for song structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The complete Suno meta tags list includes: [Intro] for opening sections (2-4 lines), [Verse 1] and [Verse 2] for narrative verses (4-6 lines each), [Pre-Chorus] to build tension (2-4 lines), [Chorus] for the main hook (4-6 lines), [Bridge] for contrast (4 lines), [Guitar Solo] for instrumental breaks (standalone), [Vocal Break] for a capella sections (2-4 lines), and [Outro] for the ending (2-4 lines). Each tag instructs Suno on how to musically interpret that section."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to add background vocals / harmonies in Suno?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wrap any lyric line in parentheses to mark it as a background vocal or harmony. Example: (I'm singing in the rain) instead of I'm singing in the rain. Suno will layer that line behind the main vocal as a backing track. This works for call-and-response, layered harmonies, and doubling effects. Use on key lines in verses or throughout the chorus for richer vocal texture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Suno style prompt character limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Suno AI enforces a strict 200-character limit on style prompts. You must use comma-separated tags instead of full sentences. If you exceed 200 characters, Suno silently truncates your prompt, potentially removing important tags from the end. Always use a character counter when building prompts. The optimal formula for 2026: Genre + Vibe + Vocals + Instruments + Production."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to structure lyrics for the best Suno results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Structure with 4-6 lines per section: [Intro] (2-4 lines) → [Verse 1] (4-6 lines) → optionally [Pre-Chorus] (2-4 lines) → [Chorus] (4-6 lines) → [Verse 2] → [Chorus] → [Bridge] (4 lines) → [Outro] (2-4 lines). Always place your strongest lyrics in the [Chorus] — this is the focal point. Use parentheses for harmonies and backing vocals. Avoid sections longer than 6 lines which can cause the AI to lose direction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Udio v4 prompt structure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Udio v4 uses the same tag-stacking approach as Suno: comma-separated keywords across Genre, Vibe, Vocals, Instruments, and Production categories. However, Udio excels with production-heavy prompts and handles complex combinations better. Tags like Sidechain Compression, Glitch Effects, and Analog Warmth produce more noticeable results in Udio. The lyrics structure (meta tags) is identical between both platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my AI music sound clunky or drift off track?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 6 most common causes: (1) Overloading the style prompt with conflicting tags — stick to 3-5 complementary choices. (2) Not using meta tags in lyrics — always wrap sections in [Verse]/[Chorus]/etc. (3) Exceeding the 200-character limit — Suno truncates silently. (4) Missing backing vocals — songs sound flat without harmonies. (5) Vague genre direction — the AI needs clear genre guidance. (6) No production quality tags — always add \"Studio Mastered\" or similar for polish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is tag stacking in Suno and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tag stacking is the technique of building a Suno style prompt using comma-separated keywords instead of full sentences. Rather than writing \"a synthwave song with female vocals,\" you stack tags: \"Synthwave, Ethereal Female Vocals.\" Each tag adds a layer of style direction. Key principles: lead with genre, mix 3-5 tags from different categories, use specific terms, avoid negation, and keep it under 200 characters. The most effective stacks combine Genre + Vibe + Vocals + Instruments + Production in that order."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen" data-page="faq">
+
+<div id="nav-placeholder"></div>
+
+<header class="border-b border-slate-800 bg-slate-950/80">
+  <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-100 tracking-tight"><span class="gradient-text">Frequently Asked</span> Questions</h1>
+    <p class="text-slate-500 text-sm mt-1">Everything you need to know about Suno AI, Udio, and AI music creation</p>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-8">
+  <div class="max-w-3xl mx-auto space-y-3">
+
+    <div class="faq-item">
+      <div class="faq-question flex items-center justify-between gap-4 py-4 px-6 select-none">
+        <h2 class="text-base font-semibold text-slate-200 pr-4">How to add guitar solo in Suno AI?</h2>
+        <span class="faq-icon flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-slate-400 text-lg leading-none transition-all">&plus;</span>
+      </div>
+      <div class="faq-answer">
+        <p class="text-slate-400 leading-relaxed">Insert the <strong class="text-slate-200">[Guitar Solo]</strong> meta tag as a standalone section in your lyrics — typically between <strong class="text-slate-200">[Verse 2]</strong> and <strong class="text-slate-200">[Chorus]</strong>. This tells Suno AI to generate an instrumental guitar break at that exact spot. The tag works for any genre but produces the best results in rock, metal, and synthwave. Combine with instrumental tags like <strong class="text-slate-200">"Electric Guitar Solo"</strong> in your style prompt for enhanced results.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question flex items-center justify-between gap-4 py-4 px-6 select-none">
+        <h2 class="text-base font-semibold text-slate-200 pr-4">What are the Suno AI meta tags for song structure?</h2>
+        <span class="faq-icon flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-slate-400 text-lg leading-none transition-all">&plus;</span>
+      </div>
+      <div class="faq-answer">
+        <p class="text-slate-400 leading-relaxed">The complete Suno meta tags list includes: <strong class="text-slate-200">[Intro]</strong> for opening sections (2-4 lines), <strong class="text-slate-200">[Verse 1]</strong> and <strong class="text-slate-200">[Verse 2]</strong> for narrative verses (4-6 lines each), <strong class="text-slate-200">[Pre-Chorus]</strong> to build tension (2-4 lines), <strong class="text-slate-200">[Chorus]</strong> for the main hook (4-6 lines), <strong class="text-slate-200">[Bridge]</strong> for contrast (4 lines), <strong class="text-slate-200">[Guitar Solo]</strong> for instrumental breaks (standalone), <strong class="text-slate-200">[Vocal Break]</strong> for a capella sections (2-4 lines), and <strong class="text-slate-200">[Outro]</strong> for the ending (2-4 lines). Each tag instructs Suno on how to musically interpret that section.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question flex items-center justify-between gap-4 py-4 px-6 select-none">
+        <h2 class="text-base font-semibold text-slate-200 pr-4">How to add background vocals / harmonies in Suno?</h2>
+        <span class="faq-icon flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-slate-400 text-lg leading-none transition-all">&plus;</span>
+      </div>
+      <div class="faq-answer">
+        <p class="text-slate-400 leading-relaxed">Wrap any lyric line in parentheses to mark it as a background vocal or harmony. Example: <strong class="text-slate-200">(I'm singing in the rain)</strong> instead of <strong class="text-slate-200">I'm singing in the rain</strong>. Suno will layer that line behind the main vocal as a backing track. This works for call-and-response, layered harmonies, and doubling effects. Use on key lines in verses or throughout the chorus for richer vocal texture.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question flex items-center justify-between gap-4 py-4 px-6 select-none">
+        <h2 class="text-base font-semibold text-slate-200 pr-4">What is the Suno style prompt character limit?</h2>
+        <span class="faq-icon flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-slate-400 text-lg leading-none transition-all">&plus;</span>
+      </div>
+      <div class="faq-answer">
+        <p class="text-slate-400 leading-relaxed">Suno AI enforces a strict <strong class="text-slate-200">200-character limit</strong> on style prompts. You must use comma-separated tags instead of full sentences. If you exceed 200 characters, Suno silently truncates your prompt, potentially removing important tags from the end. Always use a character counter when building prompts. The optimal formula for 2026: <strong class="text-slate-200">Genre + Vibe + Vocals + Instruments + Production</strong>.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question flex items-center justify-between gap-4 py-4 px-6 select-none">
+        <h2 class="text-base font-semibold text-slate-200 pr-4">How to structure lyrics for the best Suno results?</h2>
+        <span class="faq-icon flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-slate-400 text-lg leading-none transition-all">&plus;</span>
+      </div>
+      <div class="faq-answer">
+        <p class="text-slate-400 leading-relaxed">Structure with 4-6 lines per section: <strong class="text-slate-200">[Intro]</strong> (2-4 lines) → <strong class="text-slate-200">[Verse 1]</strong> (4-6 lines) → optionally <strong class="text-slate-200">[Pre-Chorus]</strong> (2-4 lines) → <strong class="text-slate-200">[Chorus]</strong> (4-6 lines) → <strong class="text-slate-200">[Verse 2]</strong> → <strong class="text-slate-200">[Chorus]</strong> → <strong class="text-slate-200">[Bridge]</strong> (4 lines) → <strong class="text-slate-200">[Outro]</strong> (2-4 lines). Always place your strongest lyrics in the <strong class="text-slate-200">[Chorus]</strong> — this is the focal point. Use parentheses for harmonies and backing vocals. Avoid sections longer than 6 lines which can cause the AI to lose direction.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question flex items-center justify-between gap-4 py-4 px-6 select-none">
+        <h2 class="text-base font-semibold text-slate-200 pr-4">What is the Udio v4 prompt structure?</h2>
+        <span class="faq-icon flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-slate-400 text-lg leading-none transition-all">&plus;</span>
+      </div>
+      <div class="faq-answer">
+        <p class="text-slate-400 leading-relaxed">Udio v4 uses the same tag-stacking approach as Suno: comma-separated keywords across Genre, Vibe, Vocals, Instruments, and Production categories. However, Udio excels with production-heavy prompts and handles complex combinations better. Tags like <strong class="text-slate-200">Sidechain Compression</strong>, <strong class="text-slate-200">Glitch Effects</strong>, and <strong class="text-slate-200">Analog Warmth</strong> produce more noticeable results in Udio. The lyrics structure (meta tags) is identical between both platforms.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question flex items-center justify-between gap-4 py-4 px-6 select-none">
+        <h2 class="text-base font-semibold text-slate-200 pr-4">Why does my AI music sound clunky or drift off track?</h2>
+        <span class="faq-icon flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-slate-400 text-lg leading-none transition-all">&plus;</span>
+      </div>
+      <div class="faq-answer">
+        <p class="text-slate-400 leading-relaxed">The 6 most common causes: <strong class="text-slate-200">(1)</strong> Overloading the style prompt with conflicting tags — stick to 3-5 complementary choices. <strong class="text-slate-200">(2)</strong> Not using meta tags in lyrics — always wrap sections in [Verse]/[Chorus]/etc. <strong class="text-slate-200">(3)</strong> Exceeding the 200-character limit — Suno truncates silently. <strong class="text-slate-200">(4)</strong> Missing backing vocals — songs sound flat without harmonies. <strong class="text-slate-200">(5)</strong> Vague genre direction — the AI needs clear genre guidance. <strong class="text-slate-200">(6)</strong> No production quality tags — always add "Studio Mastered" or similar for polish.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question flex items-center justify-between gap-4 py-4 px-6 select-none">
+        <h2 class="text-base font-semibold text-slate-200 pr-4">What is tag stacking in Suno and how does it work?</h2>
+        <span class="faq-icon flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-slate-400 text-lg leading-none transition-all">&plus;</span>
+      </div>
+      <div class="faq-answer">
+        <p class="text-slate-400 leading-relaxed">Tag stacking is the technique of building a Suno style prompt using comma-separated keywords instead of full sentences. Rather than writing "a synthwave song with female vocals," you stack tags: <strong class="text-slate-200">"Synthwave, Ethereal Female Vocals."</strong> Each tag adds a layer of style direction. Key principles: lead with genre, mix 3-5 tags from different categories, use specific terms, avoid negation, and keep it under 200 characters. The most effective stacks combine <strong class="text-slate-200">Genre + Vibe + Vocals + Instruments + Production</strong> in that order.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="src/shared.js"></script>
+<script>
+(function() {
+  var items = document.querySelectorAll('.faq-item');
+
+  items.forEach(function(item) {
+    var question = item.querySelector('.faq-question');
+    question.addEventListener('click', function() {
+      var isActive = item.classList.contains('active');
+      items.forEach(function(i) { i.classList.remove('active'); });
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

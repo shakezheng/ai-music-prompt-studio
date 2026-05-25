@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suno Meta Tags Guide — Complete Reference for AI Music Structure (2026) | AI Music Prompt Studio</title>
+<meta name="description" content="Complete reference guide for all Suno AI and Udio meta tags. Learn how to use [Intro], [Verse], [Chorus], [Bridge], [Guitar Solo], [Outro] and more. Includes examples, best practices, and common mistakes. Free resource.">
+<meta name="keywords" content="suno meta tags, udio prompt, ai music lyrics, suno style builder">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aimusicprompt.studio/meta-tags-guide.html">
+<meta property="og:title" content="Complete Suno Meta Tags Guide — AI Music Structure Reference 2026">
+<meta property="og:description" content="Complete reference guide for all Suno AI and Udio meta tags. Learn how to use [Intro], [Verse], [Chorus], [Bridge], [Guitar Solo], [Outro] and more.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { neon: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' }, glow: { 400: '#34d399', 500: '#10b981' } } } }
+}
+</script>
+<link rel="stylesheet" href="src/common.css">
+<style>
+.sidebar-sticky {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.tag-section {
+  border-left: 3px solid #6366f1;
+}
+
+@media (max-width: 768px) {
+  .sidebar-sticky {
+    position: static;
+    max-height: none;
+  }
+}
+</style>
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen" data-page="meta-tags">
+
+<div id="nav-placeholder"></div>
+
+<header class="border-b border-slate-800 bg-slate-950/80">
+  <div class="max-w-7xl mx-auto px-4 py-6 text-center">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-100 tracking-tight"><span class="gradient-text">Meta Tags</span> Complete Reference</h1>
+    <p class="text-slate-500 text-sm mt-1">Every Suno &amp; Udio meta tag explained &mdash; with examples, usage tips, and common pitfalls</p>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-8">
+
+<div class="flex flex-col md:flex-row gap-8">
+
+<!-- SIDEBAR -->
+<aside class="md:w-56 flex-shrink-0">
+  <nav class="sidebar-sticky bg-slate-900/50 border border-slate-800 rounded-xl p-4">
+    <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Quick Jump</h3>
+    <ul class="space-y-1">
+      <li><a href="#intro" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">[Intro]</a></li>
+      <li><a href="#verse" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">[Verse]</a></li>
+      <li><a href="#pre-chorus" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">[Pre-Chorus]</a></li>
+      <li><a href="#chorus" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">[Chorus]</a></li>
+      <li><a href="#bridge" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">[Bridge]</a></li>
+      <li><a href="#guitar-solo" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">[Guitar Solo]</a></li>
+      <li><a href="#vocal-break" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">[Vocal Break]</a></li>
+      <li><a href="#outro" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">[Outro]</a></li>
+      <li class="pt-2 mt-2 border-t border-slate-800">
+        <a href="#tag-combinations" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">Tag Combinations</a>
+      </li>
+      <li><a href="#best-practices" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">Best Practices</a></li>
+      <li><a href="#common-mistakes" class="block px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-colors">Common Mistakes</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<div class="flex-1 min-w-0 space-y-10">
+
+<!-- [INTRO] -->
+<section id="intro" class="tag-section bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-sm font-bold font-mono">[Intro]</span>
+    <span class="text-xs text-slate-500">Song opening</span>
+  </div>
+  <p class="text-slate-300 leading-relaxed mb-4">
+    The <strong class="text-slate-100">[Intro]</strong> tag opens your song and sets the mood. It's the first thing the AI generates, so it defines the initial atmosphere and instrumentation. Think of it as the curtain-raiser — it should grab attention and establish the sonic palette for what's to come.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Lines</h4>
+      <p class="text-sm text-slate-300">2&ndash;4 lines</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Placement</h4>
+      <p class="text-sm text-slate-300">Always at the very beginning of the song</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Tips</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>Use atmospheric or scene-setting lyrics rather than narrative</li>
+      <li>Keep it short — long intros can cause the AI to lose direction</li>
+      <li>Instrumental-only intros work well; just include the tag with no lyrics beneath</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Example</h4>
+    <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Intro]
+City lights flicker in the rain
+A lonely heart beats in the dark</pre>
+  </div>
+</section>
+
+<!-- [VERSE] -->
+<section id="verse" class="tag-section bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-sm font-bold font-mono">[Verse 1] &amp; [Verse 2]</span>
+    <span class="text-xs text-slate-500">Narrative progression</span>
+  </div>
+  <p class="text-slate-300 leading-relaxed mb-4">
+    <strong class="text-slate-100">[Verse 1]</strong> and <strong class="text-slate-100">[Verse 2]</strong> carry the narrative of your song. [Verse 1] introduces the story, theme, or emotional core. <strong class="text-slate-100">[Verse 2]</strong> should add depth, a different perspective, or advance the storyline — never simply repeat the first verse's sentiment. The contrast between verses creates narrative momentum.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Lines</h4>
+      <p class="text-sm text-slate-300">4&ndash;6 lines each</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Placement</h4>
+      <p class="text-sm text-slate-300">After [Intro], alternating with [Chorus]</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Tips</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>Keep verses roughly the same length for structural consistency</li>
+      <li>Number them explicitly — [Verse 1], [Verse 2] — not just [Verse]</li>
+      <li>Verse 2 should feel like a natural evolution, not a copy of Verse 1</li>
+      <li>You can add a [Verse 3] for longer songs, but two verses is the sweet spot</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Example</h4>
+    <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Verse 1]
+I remember the way you smiled
+Summer days that lasted miles
+We were young and we were wild
+Running free like untamed child
+
+[Verse 2]
+But seasons change and people fade
+The photographs begin to gray
+I trace the lines upon the page
+A different me, a different age</pre>
+  </div>
+</section>
+
+<!-- [PRE-CHORUS] -->
+<section id="pre-chorus" class="tag-section bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-sm font-bold font-mono">[Pre-Chorus]</span>
+    <span class="text-xs text-slate-500">Tension builder</span>
+  </div>
+  <p class="text-slate-300 leading-relaxed mb-4">
+    The <strong class="text-slate-100">[Pre-Chorus]</strong> is your tension-building section — the ramp before the drop. It sits between the verse and the chorus, cranking up emotional intensity so the chorus hits with maximum impact. Not every song needs one, but it adds professional polish when used correctly.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Lines</h4>
+      <p class="text-sm text-slate-300">2&ndash;4 lines</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Placement</h4>
+      <p class="text-sm text-slate-300">Between [Verse] and [Chorus]</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Tips</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>Increase emotional intensity with each line</li>
+      <li>Often uses rising melodic phrases that lead into the chorus</li>
+      <li>Never use [Pre-Chorus] without a following [Chorus]</li>
+      <li>Can repeat the same lyrics before both Verse 1 and Verse 2 choruses</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Example</h4>
+    <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Pre-Chorus]
+And I feel the walls closing in
+Like the ending's about to begin</pre>
+  </div>
+</section>
+
+<!-- [CHORUS] -->
+<section id="chorus" class="tag-section bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-sm font-bold font-mono">[Chorus]</span>
+    <span class="text-xs text-slate-500">The main hook</span>
+  </div>
+  <p class="text-slate-300 leading-relaxed mb-4">
+    The <strong class="text-slate-100">[Chorus]</strong> is the heart of your song — the section listeners remember and sing along to. Suno AI gives extra musical emphasis to content within [Chorus] tags, making this the most emotionally charged and sonically rich part of the track. Put your strongest, most memorable lyrics here.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Lines</h4>
+      <p class="text-sm text-slate-300">4&ndash;6 lines</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Placement</h4>
+      <p class="text-sm text-slate-300">After [Verse 1], [Verse 2], and often before [Outro]</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Tips</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>Repeat the chorus at least twice — once is never enough</li>
+      <li>Use simple, punchy language that's easy to remember</li>
+      <li>The title or central theme of the song should appear in the chorus</li>
+      <li>Avoid making the chorus too long (8+ lines) — it dilutes impact</li>
+      <li>Use identical lyrics for all chorus repetitions; Suno handles musical variation</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Example</h4>
+    <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Chorus]
+We are the fire burning bright
+Dancing shadows in the night
+We are the echo of the fight
+Rising higher, taking flight</pre>
+  </div>
+</section>
+
+<!-- [BRIDGE] -->
+<section id="bridge" class="tag-section bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-sm font-bold font-mono">[Bridge]</span>
+    <span class="text-xs text-slate-500">Contrast and relief</span>
+  </div>
+  <p class="text-slate-300 leading-relaxed mb-4">
+    The <strong class="text-slate-100">[Bridge]</strong> breaks the repetition of verse-chorus cycles. It introduces a new musical or lyrical idea — a moment of reflection, revelation, or contrast. The bridge should feel different from everything that came before it, offering the listener a fresh perspective before the final chorus or outro.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Lines</h4>
+      <p class="text-sm text-slate-300">4 lines</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Placement</h4>
+      <p class="text-sm text-slate-300">After the second [Chorus], before the final [Chorus] or [Outro]</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Tips</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>A different melodic feel is encouraged — let the AI surprise you</li>
+      <li>Use lyrical content that reframes or deepens the song's meaning</li>
+      <li>A bridge without a following chorus can work for ballads but is unusual</li>
+      <li>Keep it concise; 4 lines is the sweet spot</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Example</h4>
+    <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Bridge]
+Maybe we were never meant to stay
+Just passing ships along the way
+But in the silence I still say
+I'd do it all again today</pre>
+  </div>
+</section>
+
+<!-- [GUITAR SOLO] -->
+<section id="guitar-solo" class="tag-section bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-sm font-bold font-mono">[Guitar Solo]</span>
+    <span class="text-xs text-slate-500">Instrumental break</span>
+  </div>
+  <p class="text-slate-300 leading-relaxed mb-4">
+    The <strong class="text-slate-100">[Guitar Solo]</strong> tag instructs Suno AI and Udio to generate an instrumental guitar segment at that position. This is a <strong class="text-slate-100">standalone section</strong> — you should not include any lyrics beneath it. The AI will create a melodic guitar break that fits the song's key and style.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Lines</h4>
+      <p class="text-sm text-slate-300">0 lines of lyrics (standalone tag only)</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Placement</h4>
+      <p class="text-sm text-slate-300">Between [Verse 2] and [Chorus] for maximum impact</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Tips</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>Never write lyrics under [Guitar Solo] — it's purely instrumental</li>
+      <li>Works best in rock, metal, synthwave, and pop-rock genres</li>
+      <li>Pair with genre tags like "Electric Guitar Solo" in your style prompt for stronger results</li>
+      <li>Don't place it at the very beginning — it confuses the AI</li>
+      <li>One [Guitar Solo] per song is enough; multiple solos can feel excessive</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Example</h4>
+    <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Verse 2]
+The city sleeps beneath the gray
+Another night, another day
+
+[Guitar Solo]
+
+[Chorus]
+We are the fire burning bright...</pre>
+  </div>
+</section>
+
+<!-- [VOCAL BREAK] -->
+<section id="vocal-break" class="tag-section bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-sm font-bold font-mono">[Vocal Break]</span>
+    <span class="text-xs text-slate-500">A cappella / vocal interlude</span>
+  </div>
+  <p class="text-slate-300 leading-relaxed mb-4">
+    The <strong class="text-slate-100">[Vocal Break]</strong> tag creates a vocal-focused interlude, often with minimal or no instrumental backing. This is perfect for emotional peaks, a cappella moments, or showcasing vocal prowess. Use it sparingly for dramatic effect — it's a powerful tool when positioned correctly.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Lines</h4>
+      <p class="text-sm text-slate-300">2&ndash;4 lines</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Placement</h4>
+      <p class="text-sm text-slate-300">After [Chorus] or [Bridge], before final [Chorus]</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Tips</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>Best for emotional peaks — place it where the song needs a breath</li>
+      <li>Works well in ballads, pop, R&amp;B, and soul genres</li>
+      <li>Use minimal style prompt instrument tags when using [Vocal Break]</li>
+      <li>Avoid placing it adjacent to [Guitar Solo]; choose one or the other</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Example</h4>
+    <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Vocal Break]
+(Ooh, I'm falling)
+(Can you hear me calling?)
+(Way across the night)</pre>
+  </div>
+</section>
+
+<!-- [OUTRO] -->
+<section id="outro" class="tag-section bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-sm font-bold font-mono">[Outro]</span>
+    <span class="text-xs text-slate-500">The ending</span>
+  </div>
+  <p class="text-slate-300 leading-relaxed mb-4">
+    The <strong class="text-slate-100">[Outro]</strong> is the closing section of your song. It provides resolution — whether that's a fade-out, a final lyrical statement, or an instrumental wind-down. <strong>Never skip this tag.</strong> Songs without an outro often sound abruptly cut off or incomplete, which significantly degrades perceived quality.
+  </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Recommended Lines</h4>
+      <p class="text-sm text-slate-300">2&ndash;4 lines</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Placement</h4>
+      <p class="text-sm text-slate-300">Always at the very end of the song</p>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Tips</h4>
+    <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+      <li>Always include [Outro] — it's the most commonly skipped tag and the #1 cause of incomplete-sounding songs</li>
+      <li>Fade-out style works well: softer, shorter lines that trail off</li>
+      <li>Can echo a key line from the chorus for thematic closure</li>
+      <li>Instrumental-only outros work fine — just the tag with no lyrics</li>
+    </ul>
+  </div>
+  <div>
+    <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Example</h4>
+    <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Outro]
+The lights go dim, the music fades
+Just memories of better days
+I walk alone into the haze</pre>
+  </div>
+</section>
+
+<!-- TAG COMBINATIONS -->
+<section id="tag-combinations" class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <h2 class="text-lg font-bold text-slate-100 mb-4 flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"/><rect width="18" height="8" x="3" y="8" rx="1"/><path d="M12 2v4"/></svg>
+    Tag Combinations That Work
+  </h2>
+  <p class="text-slate-400 text-sm mb-4">These proven tag sequences produce consistently well-structured songs. Choose the template that fits your genre and song length.</p>
+
+  <div class="space-y-4">
+    <div>
+      <h4 class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">Standard Pop/Rock Structure</h4>
+      <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Intro] → [Verse 1] → [Chorus] → [Verse 2] → [Chorus] → [Bridge] → [Chorus] → [Outro]</pre>
+      <p class="text-xs text-slate-500 mt-1">The most versatile template. Works for pop, rock, indie, country, and R&amp;B.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">Extended Rock/Metal Structure</h4>
+      <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Intro] → [Verse 1] → [Pre-Chorus] → [Chorus] → [Verse 2] → [Pre-Chorus] → [Chorus] → [Guitar Solo] → [Bridge] → [Chorus] → [Outro]</pre>
+      <p class="text-xs text-slate-500 mt-1">Full-featured structure with solo and pre-chorus. Ideal for rock, metal, and synthwave.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">Vocal-Centric Ballad Structure</h4>
+      <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Intro] → [Verse 1] → [Chorus] → [Verse 2] → [Chorus] → [Vocal Break] → [Chorus] → [Outro]</pre>
+      <p class="text-xs text-slate-500 mt-1">Showcases vocals with a dedicated break. Best for ballads, pop, soul, and R&amp;B.</p>
+    </div>
+
+    <div>
+      <h4 class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2">Minimal Lo-Fi Structure</h4>
+      <pre class="bg-slate-800 rounded-lg p-4 text-sm text-slate-300 font-mono leading-relaxed overflow-x-auto">[Intro] → [Verse 1] → [Chorus] → [Verse 2] → [Chorus] → [Outro]</pre>
+      <p class="text-xs text-slate-500 mt-1">Short and sweet. Perfect for lo-fi, chill, and ambient tracks where simplicity is key.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BEST PRACTICES -->
+<section id="best-practices" class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <h2 class="text-lg font-bold text-slate-100 mb-4 flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    Best Practices
+  </h2>
+  <div class="space-y-3">
+    <div class="flex items-start gap-3">
+      <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs font-bold mt-0.5">1</span>
+      <div>
+        <h4 class="text-sm font-semibold text-slate-200">Always start with [Intro] and end with [Outro]</h4>
+        <p class="text-xs text-slate-400 mt-0.5">These bookend tags give the AI clear boundaries. Without them, songs feel shapeless or cut off.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs font-bold mt-0.5">2</span>
+      <div>
+        <h4 class="text-sm font-semibold text-slate-200">Repeat the chorus at least twice</h4>
+        <p class="text-xs text-slate-400 mt-0.5">Songs with only one chorus feel incomplete and underdeveloped. Two choruses is the minimum for a satisfying structure.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs font-bold mt-0.5">3</span>
+      <div>
+        <h4 class="text-sm font-semibold text-slate-200">Keep sections consistently sized</h4>
+        <p class="text-xs text-slate-400 mt-0.5">Don't make one verse 8 lines and another 2. Consistent section lengths help the AI maintain a coherent musical flow.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs font-bold mt-0.5">4</span>
+      <div>
+        <h4 class="text-sm font-semibold text-slate-200">Use optional tags sparingly</h4>
+        <p class="text-xs text-slate-400 mt-0.5">[Guitar Solo] and [Vocal Break] add professional polish but aren't needed in every song. One or two optional tags per song is plenty.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs font-bold mt-0.5">5</span>
+      <div>
+        <h4 class="text-sm font-semibold text-slate-200">Use parentheses ( ) for backing vocals</h4>
+        <p class="text-xs text-slate-400 mt-0.5">Wrapping lyrics in parentheses tells Suno and Udio to layer them as harmonies or background vocals behind the main vocal line.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-3">
+      <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs font-bold mt-0.5">6</span>
+      <div>
+        <h4 class="text-sm font-semibold text-slate-200">Put your best lyrics in the chorus</h4>
+        <p class="text-xs text-slate-400 mt-0.5">Suno AI gives extra emphasis to chorus content. The chorus is where your song's identity lives — make every line count.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON MISTAKES -->
+<section id="common-mistakes" class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 anchor-highlight">
+  <h2 class="text-lg font-bold text-slate-100 mb-4 flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+    Common Mistakes
+  </h2>
+  <div class="space-y-4">
+    <div class="bg-slate-800/40 border border-slate-700 rounded-lg p-4">
+      <h4 class="text-sm font-semibold text-red-400 mb-1">Forgetting to close sections</h4>
+      <p class="text-xs text-slate-400">Every [Verse] needs an explicit end before the next tag begins. Don't let lyrics from one section bleed into another without a tag boundary.</p>
+    </div>
+    <div class="bg-slate-800/40 border border-slate-700 rounded-lg p-4">
+      <h4 class="text-sm font-semibold text-red-400 mb-1">Over-stuffing the chorus</h4>
+      <p class="text-xs text-slate-400">A chorus with 8+ lines loses its punch. The AI struggles to give equal weight to every line, and the section becomes musically diluted.</p>
+    </div>
+    <div class="bg-slate-800/40 border border-slate-700 rounded-lg p-4">
+      <h4 class="text-sm font-semibold text-red-400 mb-1">Using [Pre-Chorus] without a following [Chorus]</h4>
+      <p class="text-xs text-slate-400">The pre-chorus exists solely to build into a chorus. Without one, it creates unresolved tension that makes the song feel broken.</p>
+    </div>
+    <div class="bg-slate-800/40 border border-slate-700 rounded-lg p-4">
+      <h4 class="text-sm font-semibold text-red-400 mb-1">Placing [Guitar Solo] at the very beginning</h4>
+      <p class="text-xs text-slate-400">Starting with a guitar solo confuses the AI about the song's structure. Solos belong in the middle or late sections, never as openers.</p>
+    </div>
+    <div class="bg-slate-800/40 border border-slate-700 rounded-lg p-4">
+      <h4 class="text-sm font-semibold text-red-400 mb-1">Using parentheses incorrectly for harmonies</h4>
+      <p class="text-xs text-slate-400">In Suno and Udio, <code class="bg-slate-700 px-1 py-0.5 rounded text-xs font-mono">( )</code> means backing vocals / harmonies. Don't use them for asides, stage directions, or non-vocal notes — the AI will sing them.</p>
+    </div>
+    <div class="bg-slate-800/40 border border-slate-700 rounded-lg p-4">
+      <h4 class="text-sm font-semibold text-red-400 mb-1">Skipping the [Outro] tag</h4>
+      <p class="text-xs text-slate-400">The #1 cause of songs that sound abruptly cut off. Always close your song structure with [Outro], even if it's just the tag with no lyrics.</p>
+    </div>
+    <div class="bg-slate-800/40 border border-slate-700 rounded-lg p-4">
+      <h4 class="text-sm font-semibold text-red-400 mb-1">Mixing incompatible tag types</h4>
+      <p class="text-xs text-slate-400">Don't use [Verse] and [Verse 1] interchangeably. Be consistent — either number all verses or none. Mixing formats confuses the structural detection.</p>
+    </div>
+    <div class="bg-slate-800/40 border border-slate-700 rounded-lg p-4">
+      <h4 class="text-sm font-semibold text-red-400 mb-1">Creating mega-sections</h4>
+      <p class="text-xs text-slate-400">A single [Verse] with 12 lines is a recipe for trouble. Break long blocks into multiple tagged sections. The AI needs frequent structural markers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="bg-gradient-to-r from-indigo-600/10 to-emerald-500/10 border border-indigo-500/20 rounded-2xl p-6 text-center">
+  <p class="text-slate-300 text-sm mb-2">
+    <span class="font-semibold text-slate-100">Ready to structure your lyrics?</span>
+  </p>
+  <p class="text-slate-500 text-xs mb-3">
+    Use our free Lyrics Structurer to auto-assign meta tags and build a professional song structure in seconds.
+  </p>
+  <a href="lyrics-structurer.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl transition-all duration-200 text-sm shadow-lg shadow-indigo-500/20">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2Z"/><path d="M3 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+    Open Lyrics Structurer
+  </a>
+</div>
+
+</div><!-- /main content -->
+</div><!-- /flex container -->
+
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="src/shared.js"></script>
+</body>
+</html>

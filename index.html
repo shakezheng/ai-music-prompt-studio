@@ -191,58 +191,12 @@ tailwind.config = {
   }
 }
 </script>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-  
-  * { box-sizing: border-box; }
-  body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-
-  ::-webkit-scrollbar { width: 5px; height: 5px; }
-  ::-webkit-scrollbar-track { background: rgba(30,41,59,.3); border-radius: 3px; }
-  ::-webkit-scrollbar-thumb { background: rgba(99,102,241,.4); border-radius: 3px; }
-
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes shakeX { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-4px); } 40% { transform: translateX(4px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); } }
-  @keyframes pulseGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(99,102,241,.4); } 50% { box-shadow: 0 0 0 8px rgba(99,102,241,0); } }
-  @keyframes cardSlideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
-
-  .animate-fade-up { animation: fadeUp .35s ease-out forwards; }
-  .animate-shake { animation: shakeX .35s ease-in-out; }
-  .animate-glow { animation: pulseGlow 2s ease-in-out infinite; }
-
-  .lyric-card { animation: cardSlideIn .3s ease-out forwards; opacity: 0; }
-  .lyric-card.dragging { opacity: .5; transform: scale(.98); }
-  .lyric-card.drag-over { border-color: #818cf8 !important; box-shadow: 0 0 16px rgba(99,102,241,.25); }
-
-  .tag-chip.selected { background: #4f46e5 !important; color: #fff !important; box-shadow: 0 0 12px rgba(99,102,241,.3); }
-  .tag-chip:not(.selected):hover { background: rgba(55,65,81,.8); }
-
-  .progress-bar { transition: width .3s ease, background .3s ease; }
-
-  .gradient-text { background: linear-gradient(135deg, #818cf8 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
-  .card-glow { position: relative; overflow: hidden; }
-  .card-glow::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(99,102,241,.05), transparent); transition: left .6s; }
-  .card-glow:hover::after { left: 100%; }
-
-  .anchor-highlight:target { animation: anchorFlash 1.5s ease-out; }
-  @keyframes anchorFlash { 0% { box-shadow: 0 0 0 2px rgba(99,102,241,.5); } 100% { box-shadow: 0 0 0 2px transparent; } }
-
-  @media (max-width: 1024px) {
-    .split-layout { grid-template-columns: 1fr !important; }
-  }
-</style>
+<link rel="stylesheet" href="src/common.css">
 </head>
-<body class="bg-slate-950 text-slate-200 min-h-screen">
+<body class="bg-slate-950 text-slate-200 min-h-screen" data-page="home">
 
 <!-- TRUST BANNER -->
-<div class="bg-slate-900/70 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-3 text-sm">
-    <span class="text-emerald-400 text-base">🔒</span>
-    <span class="text-slate-400 font-medium">100% Client-Side: Your lyrics and prompts are processed locally in your browser. Zero tracking.</span>
-  </div>
-</div>
+<div id="nav-placeholder"></div>
 
 <!-- HEADER -->
 <header class="border-b border-slate-800 bg-slate-950/80">
@@ -611,45 +565,9 @@ The beat of a heart that's near"
   </section>
 </main>
 
-<!-- FOOTER -->
-<footer class="mt-12 border-t border-slate-800 bg-slate-950/80" role="contentinfo">
-  <div class="max-w-7xl mx-auto px-4 py-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
-      <div>
-        <h3 class="text-sm font-semibold text-slate-300 mb-2">AI Music Master Prompt Studio</h3>
-        <p class="text-xs text-slate-500 leading-relaxed">100% client-side, free forever. No signup, zero tracking. The fastest way to structure lyrics and build style prompts for Suno AI and Udio.</p>
-      </div>
-      <div>
-        <h3 class="text-sm font-semibold text-slate-300 mb-2">Quick Links</h3>
-        <ul class="text-xs text-slate-500 space-y-1">
-          <li><a href="#lyrics-structurer" class="hover:text-indigo-400 transition-colors">Lyrics Structurer Tool</a></li>
-          <li><a href="#style-builder" class="hover:text-indigo-400 transition-colors">Style Prompt Builder</a></li>
-          <li><a href="#faq" class="hover:text-indigo-400 transition-colors">FAQ — Suno Tags & Tips</a></li>
-          <li><a href="#quick-start" class="hover:text-indigo-400 transition-colors">Quick Start Guide</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-sm font-semibold text-slate-300 mb-2">Popular Search Topics</h3>
-        <ul class="text-xs text-slate-500 space-y-1">
-          <li>Suno meta tags list · Udio v4 prompt structure</li>
-          <li>How to add guitar solo in suno</li>
-          <li>Lyrics formatting for AI music</li>
-          <li>Suno style prompt builder · Tag stacking</li>
-        </ul>
-      </div>
-    </div>
-    <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs pt-5 border-t border-slate-800">
-      <span class="text-slate-500">AI Music Master Prompt Studio — 100% Client-Side, Zero Tracking · Free for Everyone</span>
-      <div class="flex items-center gap-3 text-slate-600">
-        <span>Compatible with Suno AI V5.5 & Udio V4</span>
-        <span>·</span>
-        <span>2026</span>
-        <span>·</span>
-        <a href="#!" class="hover:text-indigo-400 transition-colors">Sitemap</a>
-      </div>
-    </div>
-  </div>
-</footer>
+<div id="footer-placeholder"></div>
+
+<script src="src/shared.js"></script>
 
 <!-- ==================== SCRIPTS ==================== -->
 <script>
